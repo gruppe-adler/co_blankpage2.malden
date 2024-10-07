@@ -19,36 +19,6 @@
     };
 */
 
-class CfgRadio
-{
-	sounds[] = {};
-	class krakenMsg1
-	{
-		// display name
-		name	= "krakenMsg1";
-
-		// filename, volume, pitch
-		sound[]	= { "\sound\filename1.ogg", db - 100, 1.0 };
-
-		// radio caption
-		title	= "Kraken, New directives. 
-        The submarine is compromised, and its contents pose a security risk. Your mission is as follows: 
-        Retrieve the blackbox and transport it to Outpost Delphi [Coordinates marked on map] for extraction. 
-        Destroy the submarine—plant charges and ensure no evidence of external involvement. 
-        Eliminate any civilian witnesses—all nearby individuals are considered compromised.
-        Maintain radio silence until you arrive at the outpost.
-        Discretion is paramount. Eliminate all traces and secure the asset. Mission failure is not an option.
-        Command out.";
-	};
-
-	class RadioMsg2
-	{
-		name	= "";
-		sound[]	= { "\sound\filename2", db - 100, 1.0 }; // .wss implied
-		title	= "$STR_RADIO_2";
-	};
-};
-
 
 //SHORTRANGE KANÄLE ============================================================
 class shortrange {

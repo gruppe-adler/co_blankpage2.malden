@@ -3,8 +3,10 @@
 if (isServer) then
 {
 
-	private _seawatch = (playableUnits + switchableUnits) select { groupId _x == "SEAWATCH" || groupId _x == "LIFELINE" };
-	private _kraken = (playableUnits + switchableUnits) select { groupId _x == "KRAKEN" };
+	private _seawatch = (playableUnits + switchableUnits) select { groupId group _x == "SEAWATCH" || groupId group _x == "SEAWATCH" };
+	private _lifeline = (playableUnits + switchableUnits) select { groupId group _x == "LIFELINE" };
+
+	private _kraken = (playableUnits + switchableUnits) select { groupId group _x == "KRAKEN" };
 
 	private _channelName = "SEAWATCH COMMAND";
 	private _channelSeawatchID = radioChannelCreate [[0.56, 0.06, 0.4, 1], _channelName, "%UNIT_NAME", []];

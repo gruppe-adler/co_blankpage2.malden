@@ -7,5 +7,7 @@ class grad_zeus{
 		class curatorShowFeedbackMessage;
 		class zeusEvents { postInit = 1; };
 		class addFakePhone;
+		class formatRadioMessage;
+		class showRadioMessage;
 	};
 };

@@ -74,7 +74,7 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Destroy Submarine", "Destroy Submarine",
+["BLANK PAGE", "Destroy Submarine",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -83,6 +83,27 @@
   } else {
      "No submarine found" call CBA_fnc_notify;
   };
+
+
+}] call zen_custom_modules_fnc_register;
+
+["BLANK PAGE", "Radio Call Kraken - destroy Submarine",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        [
+            "KRAKEN COMMAND",
+            "Kraken,",
+            "New directives. The submarine is compromised, and its contents pose a security risk. Your mission is as follows:",
+            "Destroy the submarine—plant charges and ensure no evidence of external involvement.",
+            "Eliminate any civilian witnesses—all nearby individuals are considered compromised.",
+            "Retrieve the blackbox and transport it to Outpost Delphi [Coordinates attached] for extraction.",
+            "Maintain radio silence until you arrive at the outpost.",
+            "Discretion is paramount. Eliminate all traces and secure the asset. Mission failure is not an option.",
+            "Command out."
+        ]
+    ] remoteExec ["grad_zeus_fnc_formatRadioMessage"];
 
 
 }] call zen_custom_modules_fnc_register;

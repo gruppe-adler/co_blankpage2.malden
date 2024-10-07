@@ -1,5 +1,5 @@
-enableSentences false;
-enableRadio false;
+enableSentences true;
+enableRadio true;
 enableSaving [false, false];
 
 2 enableChannel false;  // command

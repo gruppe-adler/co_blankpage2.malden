@@ -25,6 +25,22 @@ enableDebugConsole = 1;
 #include "cfgIslands.hpp"
 #include "cfgCivilians.hpp"
 
+class CfgRadio
+{
+	sounds[] = {};
+	class krakenMsg1
+	{
+		// display name
+		name = "krakenMsg1";
+
+		// filename, volume, pitch
+		sound[]	= { "sounds\radio_beep.ogg", 1, 1.0 };
+
+		// radio caption
+		title = "";
+	};
+};
+
 class missionSettings {
 	#include "USER\missionSettings.hpp"
 
@@ -79,6 +95,8 @@ class RscTitles {
         fadeout = 0;
         duration = 0;
     };
+
+   
 };
 
 //NOTIFICATIONS ================================================================
