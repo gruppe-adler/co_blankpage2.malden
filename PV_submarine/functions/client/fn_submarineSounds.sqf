@@ -7,7 +7,7 @@ private _bongLoop = [{
     _args params ["_submarine", "_bongs"];
 
     if (random 1 > 0.7) then {
-        _submarine say3d (selectRandom _bongs);
+        _submarine say3d [(selectRandom _bongs),10];
     };
 
 }, 0.5, [_submarine, _bongs]] call CBA_fnc_addPerFrameHandler;
@@ -16,7 +16,7 @@ private _screamLoop = [{
     params ["_args", "_handle"];
     _args params ["_submarine"];
 
-    _submarine say3d "screams2";
+    _submarine say3d ["screams2",10];
 
 }, 40, [_submarine]] call CBA_fnc_addPerFrameHandler;
 
