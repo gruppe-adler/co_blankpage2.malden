@@ -107,3 +107,36 @@
 
 
 }] call zen_custom_modules_fnc_register;
+
+
+["BLANK PAGE", "KRAKEN Custom Transmit",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+  _position = ASLtoAGL _position;
+
+  ["Example Dialog", [["EDIT", "Intel to send to KRAKEN", "Your message for public briefing"]], {
+			params [["_message", "..."], "_position"]; 
+      
+            [[_message#0, "", true], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+  
+  }, { systemchat "cancelled"; }, _position] call zen_dialog_fnc_create;  
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+["BLANK PAGE", "SEAWATCH Custom Transmit",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+  _position = ASLtoAGL _position;
+
+  ["Example Dialog", [["EDIT", "Intel to send to SEAWATCH", "Your message for public briefing"]], {
+			params [["_message", "..."], "_position"]; 
+      
+            [[_message#0, "", false], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+  
+  }, { systemchat "cancelled"; }, _position] call zen_dialog_fnc_create;  
+
+}] call zen_custom_modules_fnc_register;

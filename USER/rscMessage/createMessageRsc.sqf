@@ -8,7 +8,13 @@
 #define BOX_W (UI_GRID_W * 12) // control is 12 grids wide
 #define BOX_H (UI_GRID_H * 12)  // control is 5 grids high
 
-params ["_message"];
+params ["_message", ["_sound", ""], ["_isKraken", true]];
+
+private _playerKraken = player getVariable ["GRAD_isKraken", false];
+
+if (_isKraken != _playerKraken) exitWith {
+	diag_log "message received but not for my team. ignoring message.";
+};
 
 private _display = (if (is3DEN) then {findDisplay 313} else {[] call BIS_fnc_displayMission}) createDisplay "RscDisplayEmpty";
 
@@ -32,6 +38,11 @@ _ctrlMessage ctrlSetPosition [safeZoneW, safeZoneH - BOX_H/1.5, _estimatedTextWi
 _ctrlMessage ctrlSetStructuredText parseText ("<t size='2'>" + _message + "</t>");
 _ctrlMessage ctrlCommit 0;
 
+private _ctrlAdditionalText = _display ctrlCreate ["RscStructuredText", -1, _ctrlGroup];
+_ctrlAdditionalText ctrlSetPosition [safeZoneW, safeZoneH - BOX_H, _estimatedTextWidth, BOX_H];
+_ctrlAdditionalText ctrlSetStructuredText parseText ("<t size='1' color='#666666'>TRANSMISSION INCOMING</t><t color='#ff3333'> [ C O N F I D E N T I A L - DO NOT SHARE WITH OTHER TEAMS ]</t>");
+_ctrlAdditionalText ctrlCommit 0;
+
 private _textWidth = ctrlTextWidth _ctrlMessage;
 _ctrlMessage ctrlSetPosition [-_textWidth, safeZoneH - BOX_H/1.5, BOX_W*2, BOX_H];
 
@@ -40,8 +51,16 @@ _ctrlMessage ctrlCommit _duration;
 
 private _ctrlImage = _display ctrlCreate ["RscPicture", -1, _ctrlGroup];
 _ctrlImage ctrlSetPosition [0, safeZoneH - BOX_H, BOX_W*2, BOX_H];
-_ctrlImage ctrlSetText "USER\rscMessage\kraken_cmd.paa";
+
+if (_isKraken) then {
+	_ctrlImage ctrlSetText "USER\rscMessage\kraken_cmd.paa";	
+} else {
+	_ctrlImage ctrlSetText "USER\rscMessage\seawatch_cmd.paa";
+};
 _ctrlImage ctrlCommit 0;
+
+
+player createDiaryRecord ["Command Transmissions", [[dayTime, "HH:MM"] call BIS_fnc_timeToString, _message], taskNull, "", true];
 
 [_ctrlGroup, _display, _duration] spawn {
 	params ["_ctrlGroup", "_display", "_duration"];
@@ -52,4 +71,3 @@ _ctrlImage ctrlCommit 0;
 	uiSleep 0.2;
 	_display closeDisplay 1;
 };
-	
