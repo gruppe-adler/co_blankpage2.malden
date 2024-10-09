@@ -4,3 +4,4 @@
 */
 
 #include "..\PV_submarine\cfgSounds.hpp"
+#include "grad_grinder\cfgSounds.hpp"

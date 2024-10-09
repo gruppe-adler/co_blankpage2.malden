@@ -8,3 +8,27 @@ sideChannel = 0;                                                                
 artilleryComputer = 0;                                                          // Artilleriecomputer (0/1) - wenn ausgeschaltet, benutzt KI Mörser nicht mehr für indirekten Beschuss
 
 showLogo = 1;                                                                   // Adlerlogo mit Missionsnamen anzeigen (0/1) - alternativ kann hier eine Wartebedingung festgelegt werden (siehe Wiki)
+
+
+
+class CfgSFX
+{
+    sounds[] = {};
+
+    class sfxGrinderIdle
+    {
+        name = "grinder_idle";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\grad_grinder\sounds\grinder_idle.ogg",100,1,75,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+
+    class sfxGrinderActive
+    {
+        name = "grinder_Active";
+        sounds[]={sound0, sound1};
+        sound0[]={"USER\grad_grinder\sounds\grinder_Active.ogg",100,1,200,1,1,1,0};
+        sound1[]={"USER\grad_grinder\sounds\grinder_Active2.ogg",100,1,200,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+};

@@ -15,5 +15,3 @@ params ["_object"];
  { "Aborted opening" call CBA_fnc_notify; }, 
  [], 10, nil, true, false 
 ] call BIS_fnc_holdActionAdd;
-
-systemchat "added action";

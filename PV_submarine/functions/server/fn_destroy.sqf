@@ -4,6 +4,7 @@ params ["_submarine"];
 
 missionNameSpace setVariable ["GRAD_SUBMARINE_DESTROYED", true, true];
 
+[spaceCapsule] execVM "USER\scripts\untangleCapsule.sqf";
 
 [{
     deleteVehicle _this;
