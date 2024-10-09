@@ -46,7 +46,7 @@ _ctrlAdditionalText ctrlCommit 0;
 private _textWidth = ctrlTextWidth _ctrlMessage;
 _ctrlMessage ctrlSetPosition [-_textWidth, safeZoneH - BOX_H/1.5, BOX_W*2, BOX_H];
 
-private _duration = _textWidth * 10;
+private _duration = _textWidth * 30;
 _ctrlMessage ctrlCommit _duration;
 
 private _ctrlImage = _display ctrlCreate ["RscPicture", -1, _ctrlGroup];
