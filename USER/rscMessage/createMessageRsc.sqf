@@ -8,7 +8,7 @@
 #define BOX_W (UI_GRID_W * 12) // control is 12 grids wide
 #define BOX_H (UI_GRID_H * 12)  // control is 5 grids high
 
-params ["_message", ["_sound", ""], ["_isKraken", true]];
+params ["_message", ["_sound", "none"], ["_isKraken", true]];
 
 private _playerKraken = player getVariable ["GRAD_isKraken", false];
 
@@ -64,10 +64,15 @@ player createDiaryRecord ["Command Transmissions", [[dayTime, "HH:MM"] call BIS_
 
 playSound "remote_start";
 
-[] spawn {
-	sleep 1.5;
-	playSound "garble_long";
+if (_sound == "none") then {
+	[] spawn {
+		sleep 1.5;
+		playSound "garble_long";
+	};
+} else {
+	playSound _sound;
 };
+
 
 [_ctrlGroup, _display, _duration] spawn {
 	params ["_ctrlGroup", "_display", "_duration"];
