@@ -62,8 +62,17 @@ _ctrlImage ctrlCommit 0;
 
 player createDiaryRecord ["Command Transmissions", [[dayTime, "HH:MM"] call BIS_fnc_timeToString, _message], taskNull, "", true];
 
+playSound "remote_start";
+
+[] spawn {
+	sleep 1.5;
+	playSound "garble_long";
+};
+
 [_ctrlGroup, _display, _duration] spawn {
 	params ["_ctrlGroup", "_display", "_duration"];
+
+	playSound "remote_end";
 
 	sleep _duration;
 	_ctrlGroup ctrlSetPosition [safeZoneX, safeZoneY+BOX_H, safeZoneW, safeZoneH];
