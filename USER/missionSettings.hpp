@@ -11,24 +11,3 @@ showLogo = 1;                                                                   
 
 
 
-class CfgSFX
-{
-    sounds[] = {};
-
-    class sfxGrinderIdle
-    {
-        name = "grinder_idle";
-        sounds[]={sfxsound};
-        sfxsound[]={"USER\grad_grinder\sounds\grinder_idle.ogg",100,1,75,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-
-    class sfxGrinderActive
-    {
-        name = "grinder_Active";
-        sounds[]={sound0, sound1};
-        sound0[]={"USER\grad_grinder\sounds\grinder_Active.ogg",100,1,200,1,1,1,0};
-        sound1[]={"USER\grad_grinder\sounds\grinder_Active2.ogg",100,1,200,1,1,1,0};
-        empty[]= {"",0,0,0,0,0,0,0};
-    };
-};

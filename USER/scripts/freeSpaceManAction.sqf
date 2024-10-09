@@ -68,8 +68,7 @@ params ["_object"];
  "\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_fire_in_flame_ca.paa", 
  "\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_fire_in_flame_ca.paa", 
  "_this distance _target < 5 &&
-  _this getVariable ['GRAD_isGrinder', false] && 
-  (_this getVariable ['GRAD_Capsule_Welded', false])", 
+  _this getVariable ['GRAD_isGrinder', false]", 
  "_caller distance _target < 5 &&
   _caller getVariable ['GRAD_isGrinder', false] && 
   (_target getVariable ['GRAD_Capsule_Welded', false])", 
