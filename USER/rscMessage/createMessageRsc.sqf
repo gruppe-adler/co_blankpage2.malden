@@ -8,7 +8,7 @@
 #define BOX_W (UI_GRID_W * 12) // control is 12 grids wide
 #define BOX_H (UI_GRID_H * 12)  // control is 5 grids high
 
-params ["_message", ["_sound", "none"], ["_isKraken", true]];
+params ["_message", ["_sound", "none"], ["_isKraken", true], ["_seawatchToKraken", false]];
 
 private _playerKraken = player getVariable ["GRAD_isKraken", false];
 
@@ -34,44 +34,46 @@ _ctrlBackground ctrlCommit 0;
 
 private _estimatedTextWidth = _message getTextWidth ["PuristaMedium", 2];
 private _ctrlMessage = _display ctrlCreate ["RscStructuredText", -1, _ctrlGroup];
-_ctrlMessage ctrlSetPosition [safeZoneW, safeZoneH - BOX_H/1.5, _estimatedTextWidth, BOX_H];
+_ctrlMessage ctrlSetPosition [safeZoneW, safeZoneH - BOX_H/1.7, _estimatedTextWidth, BOX_H];
 _ctrlMessage ctrlSetStructuredText parseText ("<t size='2'>" + _message + "</t>");
 _ctrlMessage ctrlCommit 0;
 
 private _ctrlAdditionalText = _display ctrlCreate ["RscStructuredText", -1, _ctrlGroup];
-_ctrlAdditionalText ctrlSetPosition [safeZoneW, safeZoneH - BOX_H, _estimatedTextWidth, BOX_H];
-_ctrlAdditionalText ctrlSetStructuredText parseText ("<t size='1' color='#666666'>TRANSMISSION INCOMING</t><t color='#ff3333'> [ C O N F I D E N T I A L - DO NOT SHARE WITH OTHER TEAMS ]</t>");
-_ctrlAdditionalText ctrlCommit 0;
+_ctrlAdditionalText ctrlSetPosition [0, safeZoneH - BOX_H/1.02, safeZoneW*2, BOX_H];
+_ctrlAdditionalText ctrlSetStructuredText parseText ("<t size='1' font='EtelkaNarrowMediumPro' color='#666666'>- TRANSMISSION INCOMING - CONFIDENTIAL - DO NOT SHARE WITH OTHER TEAMS - TRANSMISSION INCOMING - CONFIDENTIAL - DO NOT SHARE WITH OTHER TEAMS - TRANSMISSION INCOMING - CONFIDENTIAL - DO NOT SHARE WITH OTHER TEAMS - TRANSMISSION INCOMING - CONFIDENTIAL - DO NOT SHARE WITH OTHER TEAMS - TRANSMISSION INCOMING - CONFIDENTIAL - DO NOT SHARE WITH OTHER TEAMS - </t>");
+_ctrlAdditionalText ctrlCommit 0; 
 
 private _textWidth = ctrlTextWidth _ctrlMessage;
 _ctrlMessage ctrlSetPosition [-_textWidth, safeZoneH - BOX_H/1.5, BOX_W*2, BOX_H];
 
-private _duration = _textWidth * 30;
-_ctrlMessage ctrlCommit _duration;
-
 private _ctrlImage = _display ctrlCreate ["RscPicture", -1, _ctrlGroup];
 _ctrlImage ctrlSetPosition [0, safeZoneH - BOX_H, BOX_W*2, BOX_H];
 
-if (_isKraken) then {
+if (_isKraken && !_seawatchToKraken) then {
 	_ctrlImage ctrlSetText "USER\rscMessage\kraken_cmd.paa";	
 } else {
 	_ctrlImage ctrlSetText "USER\rscMessage\seawatch_cmd.paa";
 };
 _ctrlImage ctrlCommit 0;
 
-private _sender = if (_isKraken) then { "KRAKEN CMD" } else { "SEAWATCH CMD" };
+private _sender = if (_isKraken && !_seawatchToKraken) then { "KRAKEN CMD" } else { "SEAWATCH CMD" };
 player createDiaryRecord ["Diary", [_sender + " - " + ([dayTime, "HH:MM"] call BIS_fnc_timeToString), _message], taskNull, "NONE", true];
 
-playSound "remote_start";
+playSoundUI ["remote_start"];
+
+private _soundID = objNull;
 
 if (_sound == "none") then {
 	[] spawn {
 		sleep 1.5;
-		playSound "garble_long";
+		_soundID = playSoundUI ["garble_long"];
 	};
 } else {
-	playSound _sound;
+	_soundID = playSoundUI [_sound];
 };
+
+private _duration = _textWidth * 100;
+_ctrlMessage ctrlCommit _duration;
 
 
 [_ctrlGroup, _display, _duration] spawn {
