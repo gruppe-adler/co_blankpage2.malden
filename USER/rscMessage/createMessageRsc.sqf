@@ -59,8 +59,8 @@ if (_isKraken) then {
 };
 _ctrlImage ctrlCommit 0;
 
-
-player createDiaryRecord ["Command Transmissions", [[dayTime, "HH:MM"] call BIS_fnc_timeToString, _message], taskNull, "", true];
+private _sender = if (_isKraken) then { "KRAKEN CMD" } else { "SEAWATCH CMD" };
+player createDiaryRecord ["Diary", [_sender + " - " + ([dayTime, "HH:MM"] call BIS_fnc_timeToString), _message], taskNull, "NONE", true];
 
 playSound "remote_start";
 
