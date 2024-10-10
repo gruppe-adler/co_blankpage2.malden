@@ -8,7 +8,9 @@
 #define BOX_W (UI_GRID_W * 12) // control is 12 grids wide
 #define BOX_H (UI_GRID_H * 12)  // control is 5 grids high
 
-params ["_message", ["_sound", "none"], ["_isKraken", true], ["_duration", 6], ["_seawatchToKraken", false]];
+params ["_message", ["_sound", "none"], ["_duration", 6], ["_isKraken", true], ["_seawatchToKraken", false]];
+
+_duration = _duration + 2; // just a little more than sound for animation etc
 
 private _playerKraken = player getVariable ["GRAD_isKraken", false];
 

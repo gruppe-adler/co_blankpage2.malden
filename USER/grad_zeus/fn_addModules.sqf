@@ -171,7 +171,7 @@
 
     [
         ["KRAKEN, this is Command. We’ve intercepted a transmission from SEAWATCH accusing us of laying a trap for your unit. This is a tactic to deflect from their own actions. Stay vigilant and focused on our objectives. Do not engage with SEAWATCH or act on their claims. Trust your training and stay on mission. Command, out.", 
-        "kraken_7", 
+        "kraken_8", 
         9,
         true
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
@@ -184,7 +184,7 @@
 
     [
         ["KRAKEN, this is Command. We are under heavy attack and need immediate assistance. Return to base immediately and reinforce our defenses. Command, out.",
-        "kraken_8", 
+        "kraken_7", 
         24,
         true
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
