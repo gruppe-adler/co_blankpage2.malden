@@ -14,7 +14,8 @@ _duration = _duration + 2; // just a little more than sound for animation etc
 
 private _playerKraken = player getVariable ["GRAD_isKraken", false];
 
-if (_isKraken != _playerKraken) exitWith {
+// show message to all of the right side PLUS all zeuses
+if (_isKraken != _playerKraken && isNull (getAssignedCuratorLogic player)) exitWith {
 	diag_log "message received but not for my team. ignoring message.";
 };
 
