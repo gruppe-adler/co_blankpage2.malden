@@ -8,7 +8,7 @@
 #define BOX_W (UI_GRID_W * 12) // control is 12 grids wide
 #define BOX_H (UI_GRID_H * 12)  // control is 5 grids high
 
-params ["_message", ["_sound", "none"], ["_isKraken", true], ["_seawatchToKraken", false]];
+params ["_message", ["_sound", "none"], ["_isKraken", true], ["_duration", 6], ["_seawatchToKraken", false]];
 
 private _playerKraken = player getVariable ["GRAD_isKraken", false];
 
@@ -16,7 +16,8 @@ if (_isKraken != _playerKraken) exitWith {
 	diag_log "message received but not for my team. ignoring message.";
 };
 
-private _display = (if (is3DEN) then {findDisplay 313} else {[] call BIS_fnc_displayMission}) createDisplay "RscDisplayEmpty";
+"GRAD_COMMAND_MESSAGE" cutRsc ["RscTitleDisplayEmpty", "PLAIN"];
+private _display = uiNamespace getVariable "RscTitleDisplayEmpty";
 
 private _ctrlGroup = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1];
 _ctrlGroup ctrlSetPosition [safeZoneX, safeZoneY+BOX_H, safeZoneW, safeZoneH];
@@ -72,7 +73,7 @@ if (_sound == "none") then {
 	_soundID = playSoundUI [_sound];
 };
 
-private _duration = _textWidth * 100;
+// private _duration = _textWidth * 100;
 _ctrlMessage ctrlCommit _duration;
 
 

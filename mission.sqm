@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1076;
+		nextID=1150;
 	};
 	class Camera
 	{
-		pos[]={9769.9131,86.203789,3942.4812};
-		dir[]={-0.82779038,-0.5514124,-0.10347672};
-		up[]={-0.54715407,0.83423281,-0.068396188};
-		aside[]={-0.12403817,0,0.99227738};
+		pos[]={942.93475,12.957001,11862.25};
+		dir[]={-0.34289908,-0.69513088,-0.63183326};
+		up[]={-0.33156952,0.71888316,-0.61095715};
+		aside[]={-0.87890947,0,0.47698861};
 	};
 };
 binarizationWanted=0;
-sourceName="co_blankpage2";
+sourceName="Co_BlankPage2";
 addons[]=
 {
 	"A3_Modules_F_Heli_Misc",
@@ -268,7 +268,7 @@ class AddonsMetaData
 		class Item13
 		{
 			className="ace_chemlights";
-			name="ACE3 - Chemlights";
+			name="ace_chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
@@ -6255,7 +6255,7 @@ class Mission
 							};
 							id=1559;
 							type="B_recon_TL_F";
-							atlOffset=0.0084214211;
+							atlOffset=0.0084209442;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6302,7 +6302,6 @@ class Mission
 							};
 							id=1560;
 							type="B_recon_F";
-							atlOffset=4.7683716e-07;
 						};
 						class Item2
 						{
@@ -6312,13 +6311,14 @@ class Mission
 								position[]={933.86066,5.1869268,11849.211};
 							};
 							side="West";
-							flags=5;
+							flags=1;
 							class Attributes
 							{
 								isPlayable=1;
 							};
 							id=1562;
 							type="B_recon_F";
+							atlOffset=3.9669085;
 						};
 						class Item3
 						{
@@ -6368,7 +6368,7 @@ class Mission
 							};
 							id=2263;
 							type="B_recon_medic_F";
-							atlOffset=0.0043339729;
+							atlOffset=0.0043334961;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6429,6 +6429,7 @@ class Mission
 							};
 							id=1544;
 							type="B_diver_F";
+							atlOffset=0.050152779;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6560,7 +6561,7 @@ class Mission
 					{
 					};
 					id=1555;
-					atlOffset=0.0084214211;
+					atlOffset=0.0084209442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23653,12 +23654,13 @@ class Mission
 		class Item84
 		{
 			dataType="Marker";
-			position[]={10721.039,0.0048828125,12012.059};
-			name="marker_10";
+			position[]={10721.039,0.0049999999,12012.059};
+			name="mrk_kraken_hq";
 			text=" KRAKEN HQ";
 			type="b_hq";
+			alpha=0;
 			id=7591;
-			atlOffset=72.537521;
+			atlOffset=72.537636;
 		};
 		class Item85
 		{
