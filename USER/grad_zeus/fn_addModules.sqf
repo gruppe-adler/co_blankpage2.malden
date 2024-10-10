@@ -140,3 +140,12 @@
   }, { systemchat "cancelled"; }, _position] call zen_dialog_fnc_create;  
 
 }] call zen_custom_modules_fnc_register;
+
+
+// Trigger Air-Raid at objective 2
+["BLANK PAGE", "Objective 2 - Air-Raid",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+  [] call BP_OBJ2_fnc_launchAttack_Air;
+}] call zen_custom_modules_fnc_register;
