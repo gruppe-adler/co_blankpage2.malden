@@ -87,6 +87,14 @@
 
 }] call zen_custom_modules_fnc_register;
 
+
+
+
+
+
+
+/// KRAKEN 
+
 ["BLANK PAGE - KRAKEN", "1 - Initial Briefing",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -191,6 +199,39 @@
 
 }] call zen_custom_modules_fnc_register;
 
+["BLANK PAGE - KRAKEN DEBRIEF", "SUCCESS",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["KRAKEN, this is Command. Outstanding work. You’ve eliminated the threat posed by rogue KRAKEN Command, and completed all objectives. Standby for extraction. Debrief via Teamspeak when you're back in base. Command, out.", 
+        "kraken_debrief", 
+        15,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+["BLANK PAGE - KRAKEN DEBRIEF", "FAIL",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["KRAKEN, this is KRAKEN Command. You failed not only your mission but our country. Shame on you, if anyone of you is still alive, you pathetic losers. Command, out.", 
+        "kraken_debrief_fail", 
+        11,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+
+
+
+/// SEAWATCH 
 
 ["BLANK PAGE - SEAWATCH", "1 - Initial Briefing",
 {
@@ -258,7 +299,40 @@
 
 }] call zen_custom_modules_fnc_register;
 
+["BLANK PAGE - SEAWATCH DEBRIEF", "SUCCESS",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
+    [
+        ["SEAWATCH, this is Command. Outstanding work. You’ve protected the intel, eliminated the threat posed by rogue KRAKEN Command, and completed all objectives. Standby for extraction. Debrief via Teamspeak when you're back in base. Command, out.", 
+        "seawatch_debrief", 
+        18,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+["BLANK PAGE - SEAWATCH DEBRIEF", "FAIL",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["SEAWATCH, this is Seawatch Command. You failed not only your mission but our country. Shame on you, if anyone of you is still alive, you pathetic losers. Command, out.", 
+        "seawatch_debrief_fail", 
+        11,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+
+
+
+
+/// CUSTOM TRANSMITS
 
 ["BLANK PAGE - KRAKEN", "KRAKEN Custom Transmit",
 {
