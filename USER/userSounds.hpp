@@ -126,3 +126,35 @@ class submarine
     sound[] = {"USER\sounds\submarine2.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
+
+
+
+
+class seawatch_debrief
+{
+    name = "seawatch_debrief";
+    sound[] = {"USER\sounds\seawatch_debrief.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class seawatch_debrief_fail
+{
+    name = "seawatch_debrief_fail";
+    sound[] = {"USER\sounds\seawatch_debrief_fail.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+class kraken_debrief
+{
+    name = "kraken_debrief";
+    sound[] = {"USER\sounds\kraken_debrief.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class kraken_debrief_fail
+{
+    name = "kraken_debrief_fail";
+    sound[] = {"USER\sounds\kraken_debrief_fail.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};

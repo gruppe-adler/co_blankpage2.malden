@@ -1,7 +1,5 @@
 params ["_laptop"];
 
-private _laptop = cursorObject;
-
 private _message = "
 \#
 \#
