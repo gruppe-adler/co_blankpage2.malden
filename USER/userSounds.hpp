@@ -119,3 +119,10 @@ class seawatch_4
     sound[] = {"USER\sounds\seawatch_4.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
+
+class submarine
+{
+    name = "submarine";
+    sound[] = {"USER\sounds\submarine2.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};

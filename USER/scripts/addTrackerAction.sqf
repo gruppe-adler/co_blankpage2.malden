@@ -1,5 +1,7 @@
 params ["_player"];
 
+if (!(player getVariable ["GRAD_isRadioActiveExpert", false])) exitWith {};
+
 private _onAction = {
     [] execVM "USER\scripts\showTracker.sqf";
 };

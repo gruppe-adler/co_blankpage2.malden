@@ -260,7 +260,7 @@
 
 
 
-["BLANK PAGE", "KRAKEN Custom Transmit",
+["BLANK PAGE - KRAKEN", "KRAKEN Custom Transmit",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -277,7 +277,7 @@
 
 
 
-["BLANK PAGE", "SEAWATCH Custom Transmit",
+["BLANK PAGE - SEAWATCH", "SEAWATCH Custom Transmit",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -299,4 +299,17 @@
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
   [] call BP_OBJ2_fnc_launchAttack_Air;
+}] call zen_custom_modules_fnc_register;
+
+
+
+["BLANK PAGE EXTRACTION", "Spawn Submarine here",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+  _position = ASLtoAGL _position;
+
+  // global for FX
+  [[_position], "USER\scripts\submarineSurface.sqf"] remoteExec ["BIS_fnc_execVM"];
+
 }] call zen_custom_modules_fnc_register;
