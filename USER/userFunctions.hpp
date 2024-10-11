@@ -7,3 +7,4 @@
 #include "grad_zeus\cfgFunctions.hpp"
 #include "grad_grinder\cfgFunctions.hpp"
 #include "functions\objective_2\cfgFunctions.hpp"
+#include "functions\loadout\cfgFunctions.hpp"
