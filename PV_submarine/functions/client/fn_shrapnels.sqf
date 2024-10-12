@@ -6,7 +6,7 @@ private _intensityMultiplier = 0.2;
 private _source1 = "#particlesource" createVehicleLocal _pos;  
 _source1 setPos _pos;  
 _source1 setParticleCircle [0, [0, 0, 0]];  
-_source1 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50Ü_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
+_source1 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50*_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
 _source1 setParticleParams [
     ["\A3\data_f\ParticleEffects\Shard\shard.p3d", 1, 0, 1], "", "SpaceObject", 0.5, 120, 
     [0, 0, 0.3], [0, 0, 50*_intensityMultiplier], 0.1, 1000, 0.01, 0.075, [1, 1, 1], [[0.3, 0.3, 0.3, 1], [0.3, 0.3, 0.3, 0.3], [0.3, 0.3, 0.3, 0]], 
@@ -25,7 +25,7 @@ _source1 setDropInterval 0.0001;
 private _source2 = "#particlesource" createVehicleLocal _pos;  
 _source2 setPos _pos;  
 _source2 setParticleCircle [0, [0, 0, 0]];  
-_source2 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50Ü_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
+_source2 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50*_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
 _source2 setParticleParams [
     ["\A3\data_f\ParticleEffects\Shard\shard2.p3d", 1, 0, 1], "", "SpaceObject", 0.5, 120, 
     [0, 0, 0.3], [0, 0, 50*_intensityMultiplier], 0.1, 1000, 0.01, 0.075, [1, 1, 1], [[0.3, 0.3, 0.3, 1], [0.3, 0.3, 0.3, 0.3], [0.3, 0.3, 0.3, 0]], 
@@ -43,7 +43,7 @@ _source2 setDropInterval 0.0001;
 private _source3 = "#particlesource" createVehicleLocal _pos;  
 _source3 setPos _pos;  
 _source3 setParticleCircle [0, [0, 0, 0]];  
-_source3 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50Ü_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
+_source3 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50*_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
 _source3 setParticleParams [
     ["\A3\data_f\ParticleEffects\Shard\shard3.p3d", 1, 0, 1], "", "SpaceObject", 0.5, 120, 
     [0, 0, 0.3], [0, 0, 50*_intensityMultiplier], 0.1, 1000, 0.01, 0.075, [1, 1, 1], [[0.3, 0.3, 0.3, 1], [0.3, 0.3, 0.3, 0.3], [0.3, 0.3, 0.3, 0]], 
@@ -62,7 +62,7 @@ _source3 setDropInterval 0.0001;
 private _source4 = "#particlesource" createVehicleLocal _pos;  
 _source4 setPos _pos;  
 _source4 setParticleCircle [0, [0, 0, 0]];  
-_source4 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50Ü_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
+_source4 setParticleRandom [0, [0, 0, 0], [70*_intensityMultiplier,70*_intensityMultiplier, 50*_intensityMultiplier], 1, 3, [0, 0, 0, 0.1], 0, 0];  
 _source4 setParticleParams [
     ["\A3\data_f\ParticleEffects\Shard\shard4.p3d", 1, 0, 1], "", "SpaceObject", 0.5, 120, 
     [0, 0, 0.3], [0, 0, 50*_intensityMultiplier], 0.1, 1000, 0.01, 0.075, [1, 1, 1], [[0.3, 0.3, 0.3, 1], [0.3, 0.3, 0.3, 0.3], [0.3, 0.3, 0.3, 0]], 

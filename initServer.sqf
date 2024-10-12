@@ -17,11 +17,11 @@
 			private _isAwake = [_x] call ace_common_fnc_isAwake;
 			private _isInArea = _x inArea trg_kraken_hq;
 			if (_isInArea) then {
-				systemChat "setting Captive";
+				// systemChat "setting Captive";
 				[_x, true] remoteExec ["setCaptive", _x];
 			} else {
 				if (_isAwake) then {
-					systemChat "setting not Captive";
+					// systemChat "setting not Captive";
 					[_x, false] remoteExec ["setCaptive", _x];
 				};
 			};
