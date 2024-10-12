@@ -6,6 +6,11 @@ if (isServer) then {
 
 		private _count = missionNameSpace getVariable ["GRAD_SUBMARINE_COUNTDOWN", 3600];
 
+		if (missionNameSpace getVariable ["GRAD_SUBMARINE_COUNTDOWN_STOPPED", false]) exitWith {
+			[_handle] call CBA_fnc_removePerFrameHandler;
+		};
+
+
 		if (_count > 1) then {
 			missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN", _count-1, true];
 		} else {
