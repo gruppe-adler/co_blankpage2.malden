@@ -94,6 +94,7 @@ params ["_object"];
 	true
  }, 
  {
+	params ["_target"];
 	_target setVariable ["GRAD_Capsule_Welded", false, true];
 	["The hatch has been opened.", 1, [1,1,1,1], true] call CBA_fnc_notify;
 	// spawn spaceman on server
