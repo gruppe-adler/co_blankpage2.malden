@@ -1,6 +1,6 @@
 params ["_capsule"];
 
-private _spaceman = (createGroup civilian) createUnit ["C_pilot2_story_RF", position _capsule, [], 0, "CAN_COLLIDE"];
+private _spaceman = (createGroup civilian) createUnit ["C_pilot2_story_RF", position _capsule, [], 0, "NONE"];
 
 _spaceman setUnitLoadout [[],[],[],["UK3CB_ION_B_U_H_Pilot_Uniform_01_WIN",[["FlashDisk",1,30]]],["V_DeckCrew_white_F",[]],["UK3CB_ION_B_B_RIF_WIN_02",[]],"vn_b_helmet_aph6_02_01","",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]];
 _spaceman allowDamage false;
