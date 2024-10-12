@@ -1,7 +1,11 @@
-params ["_pos"];
+params ["_submarine"];
+
+private _pos = getPos _submarine;
+_pos set [2, 0.5];
 
 /* shockwave */
 _shockwave = "#particlesource" createVehicleLocal _pos;
+_shockwave setPosASL _pos;
 _shockwave setParticleParams [["\A3\data_f\ParticleEffects\Universal\Refract", 1,0,1], "", "Billboard", 1, 10, [0, 0, 0], 
 [0, 0, 0], 
 0, 10, 7.9, 0.01, [50, 50, 50], 

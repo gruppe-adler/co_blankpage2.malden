@@ -1,7 +1,7 @@
-params ["_position"];
+params ["_submarine"];
 
 
-[_position] call PV_submarine_fnc_shrapnels;
-[_position] spawn PV_submarine_fnc_destroyFX;
-[_position] spawn PV_submarine_fnc_lightFlash;
-[_position] call PV_submarine_fnc_splash;
+[_submarine] call PV_submarine_fnc_shrapnels;
+[_submarine] spawn PV_submarine_fnc_destroyFX;
+[_submarine] spawn PV_submarine_fnc_lightFlash;
+[_submarine] call PV_submarine_fnc_splash;

@@ -1,5 +1,7 @@
-params ["_position"];
+params ["_submarine"];
 
+private _position = getPos _submarine;
+_position = [_position#0, _position#1, 0.5];
 
 private _brightness    = 1.0;
 private _color    = [1,0.85,0.6];
@@ -8,7 +10,7 @@ private _intensity    = 3000;
 private _attenuation    = [0,0,0,1.6];
 
 private _light = "#lightpoint" createVehicle [0,0,0];
-_light setPos _position;
+_light setPosASL _position;
 //_light setPosATL _pos;
  
 _lightflaresize = 500;

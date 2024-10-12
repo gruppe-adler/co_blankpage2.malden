@@ -1,6 +1,6 @@
 params ["_submarine"];
 
-[position _submarine] remoteExec ["PV_submarine_fnc_spawnEffects", [0,-2] select isDedicated, false];
+[_submarine] remoteExec ["PV_submarine_fnc_spawnEffects", [0,-2] select isDedicated, false];
 
 missionNameSpace setVariable ["GRAD_SUBMARINE_DESTROYED", true, true];
 
@@ -10,7 +10,7 @@ private _warhead = "vn_mine_mk36" createVehicle (position _submarine);
 _warhead setDamage 1;
 
 [{
-    deleteVehicle _this;
+    hideObjectGlobal _this;
 }, _submarine, 1] call CBA_fnc_waitAndExecute;
 
 
