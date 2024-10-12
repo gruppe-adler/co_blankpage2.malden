@@ -5,6 +5,8 @@
 
 [player] execVM "user\scripts\addTrackerAction.sqf";
 
+[] execVM "user\scripts\startCountdown.sqf";
+
 // make KRAKEN HQ visible for kraken only
 if (player getVariable ["GRAD_isKraken", false]) then {
 	"mrk_kraken_hq" setMarkerAlphaLocal 1;
@@ -26,4 +28,3 @@ if (isServer) then {
 	}] call CBA_fnc_addEventhandler;
 		
 };
-
