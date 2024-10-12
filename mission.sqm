@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=7727;
+		nextID=7731;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7066.207,-6.830112,11951.896};
-		dir[]={-0.40961188,-0.61366493,-0.67502797};
-		up[]={-0.3183541,0.78955907,-0.52463782};
-		aside[]={-0.85492712,2.5128975e-07,0.51877785};
+		pos[]={7063.0308,-11.439912,11946.87};
+		dir[]={-0.29972428,-0.67981094,-0.66934478};
+		up[]={-0.27782837,0.73338735,-0.6204468};
+		aside[]={-0.9126755,1.4901161e-08,0.40868476};
 	};
 };
 binarizationWanted=0;
@@ -4890,7 +4890,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=99;
+		items=100;
 		class Item0
 		{
 			dataType="Layer";
@@ -28423,7 +28423,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7081.772,-10.833833,11930.7};
-			angle=5.1538692;
+			angle=5.1538687;
 			class Attributes
 			{
 				name="trg_submarine";
@@ -28500,17 +28500,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7062.4136,-13.069122,11945.741};
-						angles[]={0.23520264,5.0847077,6.1692414};
+						position[]={7062.4141,-13.069123,11945.741};
+						angles[]={0.23520057,5.0847025,6.1692328};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
+						init="if (isServer) then { [this] call BIS_Fnc_replaceWithSimpleObject; };";
 						disableSimulation=1;
 					};
 					id=7714;
 					type="vn_mine_mk36";
+					atlOffset=-9.5367432e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28566,6 +28568,37 @@ class Mission
 			};
 			id=7726;
 			atlOffset=0.38494205;
+		};
+		class Item99
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7062.8813,-12.976244,11947.475};
+						angles[]={0,3.2134292,-0};
+					};
+					side="East";
+					flags=3;
+					class Attributes
+					{
+					};
+					id=7730;
+					type="O_diver_exp_F";
+					atlOffset=0.40825939;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=7729;
+			atlOffset=0.40825939;
 		};
 	};
 	class Connections

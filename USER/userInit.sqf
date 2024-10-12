@@ -26,5 +26,15 @@ if (isServer) then {
 		diag_log format ["submarine detonation: unit: %1, item1: %2, item2: %3", _unit, _item1, _item2];
 
 	}] call CBA_fnc_addEventhandler;
-		
+
+	["ace_explosives_defuse", {
+		params ["_explosive", "_unit"];
+
+		// stop countdown
+		if (typeof _explosive == "vn_mine_limpet_01_ammo") then {
+			missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN_STOPPED", true, true];
+		};
+
+	}] call CBA_fnc_addEventhandler;
+
 };

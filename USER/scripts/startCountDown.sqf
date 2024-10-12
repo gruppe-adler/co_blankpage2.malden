@@ -9,6 +9,10 @@ if (hasInterface) then {
 		params ["_args", "_handle"];
 
 		if (missionNameSpace getVariable ["GRAD_SUBMARINE_COUNTDOWN_STOPPED", false]) then {
+			submarine_display setObjectTexture [
+				0,"#(rgb,8,8,3)color(0,0,0,0)"
+
+			];
 			[_handle] call CBA_fnc_removePerFrameHandler;
 		};
 
