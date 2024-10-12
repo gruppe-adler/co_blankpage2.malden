@@ -16,7 +16,5 @@ sleep 0.1;
 deleteVehicle _shockwave;
 
 sleep 1;
-// _warhead = "RHS_9M79_1_F" createVehicleLocal _pos;
-_warhead = "ammo_Missile_Cruise_01" createVehicleLocal _pos;
-_warhead setDamage 1;
+
 addCamShake [10, 1, 25];

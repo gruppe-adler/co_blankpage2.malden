@@ -6,6 +6,9 @@ missionNameSpace setVariable ["GRAD_SUBMARINE_DESTROYED", true, true];
 
 [spaceCapsule] execVM "USER\scripts\untangleCapsule.sqf";
 
+private _warhead = "vn_mine_mk36" createVehicle (position _submarine);
+_warhead setDamage 1;
+
 [{
     deleteVehicle _this;
 }, _submarine, 1] call CBA_fnc_waitAndExecute;
