@@ -33,6 +33,8 @@ if (isServer) then {
 		// stop countdown
 		if (typeof _explosive == "vn_mine_limpet_01_ammo") then {
 			missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN_STOPPED", true, true];
+			[-1] call BIS_fnc_countdown;
+			deleteVehicle submarine_net;
 		};
 
 	}] call CBA_fnc_addEventhandler;

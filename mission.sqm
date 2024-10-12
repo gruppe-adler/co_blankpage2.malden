@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=7731;
+		nextID=7749;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7063.0308,-11.439912,11946.87};
-		dir[]={-0.29972428,-0.67981094,-0.66934478};
-		up[]={-0.27782837,0.73338735,-0.6204468};
-		aside[]={-0.9126755,1.4901161e-08,0.40868476};
+		pos[]={9696.8438,43.412903,3862.9214};
+		dir[]={0.73231977,-0.63155836,-0.25464743};
+		up[]={0.59652352,0.77532744,-0.20742759};
+		aside[]={-0.32843798,-3.061723e-08,-0.94452775};
 	};
 };
 binarizationWanted=0;
@@ -180,13 +180,15 @@ addons[]=
 	"A3_Characters_F_Enoch_Facewear",
 	"A3_Characters_F_Enoch",
 	"A3_Misc_F_Helpers",
-	"weapons_f_vietnam_03_c"
+	"weapons_f_vietnam_03_c",
+	"gm_objects_fortification",
+	"A3_Structures_F_Enoch_Industrial_Agriculture"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=87;
+		items=88;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -776,6 +778,13 @@ class AddonsMetaData
 			name="weapons_f_vietnam_03_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
+		};
+		class Item87
+		{
+			className="gm_objects_fortification";
+			name="gm_objects_fortification";
+			author="Global Mobilization";
+			url="global-mobilization.com";
 		};
 	};
 };
@@ -4890,7 +4899,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=100;
+		items=98;
 		class Item0
 		{
 			dataType="Layer";
@@ -6138,14 +6147,14 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={713.34973,28.921438,12152.893};
-								angles[]={0,6.2810855,0};
+								position[]={713.34998,28.921438,12152.893};
+								angles[]={0,6.2810907,0};
 							};
 							side="West";
 							flags=6;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_isgrinder"", true];";
 								description="SQL@SEAWATCH";
 								isPlayable=1;
 								class Inventory
@@ -6310,7 +6319,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_isgrinder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -6434,7 +6443,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_isgrinder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -6565,13 +6574,13 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={710.36151,28.921438,12150.338};
+								position[]={710.362,28.921438,12150.338};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_isgrinder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -6703,13 +6712,13 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={711.77881,28.921438,12150.245};
+								position[]={711.77899,28.921438,12150.245};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_isgrinder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -6841,13 +6850,13 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={706.9798,28.921438,12150.562};
+								position[]={706.97998,28.921438,12150.562};
 							};
 							side="West";
 							flags=5;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_isgrinder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -6971,6 +6980,36 @@ class Mission
 							};
 							id=7699;
 							type="B_soldier_exp_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 					};
 					class Attributes
@@ -7027,7 +7066,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout; " \n "};" \n "this setvariable [""grad_iskraken"", true];";
 								description="SQL@KRAKEN";
 								isPlayer=1;
 								isPlayable=1;
@@ -7206,13 +7245,13 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={937.35291,5.1795168,11852.089};
+								position[]={937.35303,5.1794391,11852.089};
 							};
 							side="West";
 							flags=5;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_iskraken"", true]; this setvariable [""grad_isWelder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -7294,72 +7333,195 @@ class Mission
 							};
 							id=1560;
 							type="B_recon_F";
-							atlOffset=0.048077583;
+							atlOffset=0.047999859;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item2
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={935.85333,5.1812286,11852.074};
+								position[]={935.85303,5.1814394,11852.074};
 							};
 							side="West";
 							flags=5;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_iskraken"", true]; this setvariable [""grad_isWelder"", true];";
 								isPlayable=1;
 							};
 							id=1562;
 							type="B_recon_F";
+							atlOffset=0.00021076202;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item3
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={932.82703,5.1844826,11852.209};
+								position[]={932.82703,5.1855869,11852.21};
 							};
 							side="West";
 							flags=5;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_iskraken"", true]; this setvariable [""grad_isWelder"", true];";
 								isPlayable=1;
 							};
 							id=1564;
 							type="B_recon_F";
+							atlOffset=0.0011053085;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male04ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item4
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={934.31689,5.1828594,11852.16};
+								position[]={934.31702,5.1825829,11852.16};
 							};
 							side="West";
-							flags=5;
+							flags=1;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "}; this setvariable [""grad_iskraken"", true]; this setvariable [""grad_isWelder"", true];";
 								isPlayable=1;
 							};
 							id=1566;
 							type="B_recon_F";
+							atlOffset=1.0199995;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male02ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item5
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={939.1167,5.1774354,11852.165};
-								angles[]={0.00119604,0,6.2820935};
+								position[]={939.117,5.1774392,11852.165};
+								angles[]={0.0012042772,0,6.2820859};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};this setvariable [""grad_iskraken"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -7527,6 +7689,7 @@ class Mission
 							};
 							id=2263;
 							type="B_recon_medic_F";
+							atlOffset=3.8146973e-06;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -7583,7 +7746,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};this setvariable [""grad_iskraken"", true]; this setvariable [""grad_isWelder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -7747,19 +7910,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={940.58197,5.1754394,11852.111};
+								position[]={940.58197,5.1754389,11852.111};
 								angles[]={0.0012042772,0,6.2820859};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};this setvariable [""grad_iskraken"", true]; this setvariable [""grad_isWelder"", true];";
 								isPlayable=1;
 							};
 							id=1554;
 							type="B_diver_F";
-							atlOffset=0.044000626;
+							atlOffset=0.044000149;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -7816,7 +7979,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};";
+								init="if (local this) then {" \n "  [this] call BP_LOADOUT_fnc_initLoadout;" \n "};this setvariable [""grad_iskraken"", true]; this setvariable [""grad_isWelder"", true];";
 								isPlayable=1;
 								class Inventory
 								{
@@ -10371,11 +10534,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7077.354,-10.256967,11942.628};
-				angles[]={6.2376165,0,0.046366453};
+				position[]={7073.9614,-8.8523483,11944.514};
 			};
 			id=2237;
 			type="ModuleEffectsBubbles_F";
+			atlOffset=1.7501345;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10490,8 +10653,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7056.0459,-12.213148,11948.886};
-				angles[]={6.2376165,0,0.046366453};
+				position[]={7062.4536,-13.109858,11945.905};
+				angles[]={0.1904628,0,6.057497};
 			};
 			id=2238;
 			type="ModuleEffectsBubbles_F";
@@ -10609,11 +10772,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7099.8091,-10.390221,11927.063};
-				angles[]={6.2376165,0,0.046366453};
+				position[]={7099.7993,-0.0444628,11927.046};
+				angles[]={6.186686,0,0.051953323};
 			};
 			id=2239;
 			type="ModuleEffectsBubbles_F";
+			atlOffset=9.1830692;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10979,40 +11143,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7101.7197,-9.6904898,11929.8};
-				angles[]={6.186686,0,0.03358667};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=2311;
-			type="Land_HistoricalPlaneDebris_03_F";
-		};
-		class Item65
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7104.6733,-9.5407267,11931.994};
-				angles[]={6.186686,0,0.03358667};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=2312;
-			type="Land_HistoricalPlaneDebris_04_F";
-		};
-		class Item66
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={7106.9224,-7.9870672,11928.729};
-				angles[]={6.186686,4.2944875,0.033580136};
+				angles[]={6.236136,2.8691006,6.192471};
 			};
 			side="Empty";
 			flags=4;
@@ -11054,7 +11186,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item67
+		class Item65
 		{
 			dataType="Group";
 			side="East";
@@ -11126,7 +11258,7 @@ class Mission
 			id=2325;
 			atlOffset=0.68532276;
 		};
-		class Item68
+		class Item66
 		{
 			dataType="Layer";
 			name="submarine";
@@ -11174,79 +11306,7 @@ class Mission
 			id=2329;
 			atlOffset=-7.8510008;
 		};
-		class Item69
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7099.395,-9.631772,11926.642};
-				angles[]={4.5386415,6.1832476,0.45659557};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="[this] execVM ""user\scripts\freeSailorsAction.sqf""; [this] call PV_Submarine_fnc_submarineSounds;";
-				disableSimulation=1;
-			};
-			id=2335;
-			type="Barrel4";
-			atlOffset=0.23900032;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item70
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7073.7925,-8.8559618,11943.918};
-				angles[]={4.5386415,6.1832476,0.45659557};
-			};
-			side="Empty";
-			flags=1;
-			class Attributes
-			{
-				init="[this] execVM ""user\scripts\freeSailorsAction.sqf""; [this] call PV_Submarine_fnc_submarineSounds;";
-				disableSimulation=1;
-			};
-			id=2337;
-			type="Barrel4";
-			atlOffset=1.2200003;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item71
+		class Item67
 		{
 			dataType="Layer";
 			name="Silos' Oil Rig (Composition)";
@@ -11653,7 +11713,7 @@ class Mission
 			id=3377;
 			atlOffset=76.577652;
 		};
-		class Item72
+		class Item68
 		{
 			dataType="Layer";
 			name="Jackup Oil Rig (Bastek)";
@@ -23209,7 +23269,7 @@ class Mission
 			id=5154;
 			atlOffset=2.0330834;
 		};
-		class Item73
+		class Item69
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -23220,7 +23280,7 @@ class Mission
 			id=6523;
 			atlOffset=74.303711;
 		};
-		class Item74
+		class Item70
 		{
 			dataType="Layer";
 			name="mobile_cmd_center";
@@ -24878,7 +24938,7 @@ class Mission
 			id=7476;
 			atlOffset=-182.03171;
 		};
-		class Item75
+		class Item71
 		{
 			dataType="Group";
 			side="Civilian";
@@ -24942,7 +25002,7 @@ class Mission
 			id=7478;
 			atlOffset=13.003536;
 		};
-		class Item76
+		class Item72
 		{
 			dataType="Object";
 			class PositionInfo
@@ -24958,7 +25018,7 @@ class Mission
 			type="Land_WaterBottle_01_compressed_F";
 			atlOffset=0.48163414;
 		};
-		class Item77
+		class Item73
 		{
 			dataType="Object";
 			class PositionInfo
@@ -24974,7 +25034,7 @@ class Mission
 			type="Land_WaterBottle_01_cap_F";
 			atlOffset=0.48345566;
 		};
-		class Item78
+		class Item74
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25010,7 +25070,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item79
+		class Item75
 		{
 			dataType="Marker";
 			position[]={804.3847,24.113037,12167.834};
@@ -25020,7 +25080,7 @@ class Mission
 			id=7581;
 			atlOffset=-4.8169632;
 		};
-		class Item80
+		class Item76
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25036,7 +25096,7 @@ class Mission
 			type="UK3CB_ION_O_Woodland_Bell412_Utility";
 			atlOffset=8.5430565;
 		};
-		class Item81
+		class Item77
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25052,7 +25112,7 @@ class Mission
 			type="UK3CB_MDF_O_RHIB_Gunboat";
 			atlOffset=69.802696;
 		};
-		class Item82
+		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25068,7 +25128,7 @@ class Mission
 			type="O_T_Lifeboat";
 			atlOffset=69.991768;
 		};
-		class Item83
+		class Item79
 		{
 			dataType="Marker";
 			position[]={10721.039,0.0049999999,12012.059};
@@ -25079,7 +25139,7 @@ class Mission
 			id=7591;
 			atlOffset=72.537636;
 		};
-		class Item84
+		class Item80
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25152,7 +25212,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item85
+		class Item81
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -25195,7 +25255,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item86
+		class Item82
 		{
 			dataType="Object";
 			class PositionInfo
@@ -25211,7 +25271,7 @@ class Mission
 			id=7594;
 			type="PARACHUTE_TARGET";
 		};
-		class Item87
+		class Item83
 		{
 			dataType="Layer";
 			name="FOB LAB";
@@ -25425,7 +25485,7 @@ class Mission
 			};
 			id=7595;
 		};
-		class Item88
+		class Item84
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -25468,7 +25528,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item89
+		class Item85
 		{
 			dataType="Layer";
 			name="FOB Sentinel";
@@ -28186,7 +28246,7 @@ class Mission
 			id=7603;
 			atlOffset=0.41758347;
 		};
-		class Item90
+		class Item86
 		{
 			dataType="Object";
 			class PositionInfo
@@ -28221,7 +28281,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item91
+		class Item87
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28287,7 +28347,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item92
+		class Item88
 		{
 			dataType="Group";
 			side="Civilian";
@@ -28338,7 +28398,7 @@ class Mission
 			};
 			id=7685;
 		};
-		class Item93
+		class Item89
 		{
 			dataType="Object";
 			class PositionInfo
@@ -28385,7 +28445,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item94
+		class Item90
 		{
 			dataType="Object";
 			class PositionInfo
@@ -28419,7 +28479,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item95
+		class Item91
 		{
 			dataType="Trigger";
 			position[]={7081.772,-10.833833,11930.7};
@@ -28433,14 +28493,14 @@ class Mission
 			id=7707;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item96
+		class Item92
 		{
 			dataType="Layer";
 			name="KRAKEN HQ Units";
 			id=7716;
 			atlOffset=96.5;
 		};
-		class Item97
+		class Item93
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28452,14 +28512,14 @@ class Mission
 			id=7718;
 			type="Logic";
 		};
-		class Item98
+		class Item94
 		{
 			dataType="Layer";
 			name="submarine bomb";
 			state=1;
 			class Entities
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -28565,11 +28625,47 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7108.4771,-9.8717299,11929.18};
+						angles[]={0,3.5930743,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="submarine_net";
+						disableSimulation=1;
+					};
+					id=7734;
+					type="land_gm_camonet_04_east";
+					atlOffset=0.017001152;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			id=7726;
-			atlOffset=0.38494205;
+			atlOffset=-1.1787729;
 		};
-		class Item99
+		class Item95
 		{
 			dataType="Group";
 			side="East";
@@ -28599,6 +28695,76 @@ class Mission
 			};
 			id=7729;
 			atlOffset=0.40825939;
+		};
+		class Item96
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7099.2534,-9.8346958,11926.51};
+				angles[]={1.3144599,0.10974631,5.8173742};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] execVM ""user\scripts\freeSailorsAction.sqf""; [this] call PV_Submarine_fnc_submarineSounds;";
+				disableSimulation=1;
+			};
+			id=7745;
+			type="Land_Drainage_01_F";
+			atlOffset=0.62836742;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item97
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7073.6528,-9.0412827,11943.769};
+				angles[]={1.2610875,0.13358749,5.8232036};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this] execVM ""user\scripts\freeSailorsAction.sqf""; [this] call PV_Submarine_fnc_submarineSounds;";
+				disableSimulation=1;
+			};
+			id=7746;
+			type="Land_Drainage_01_F";
+			atlOffset=1.6814785;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections

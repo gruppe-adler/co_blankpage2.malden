@@ -5,8 +5,10 @@ params ["_object"];
  "Open hatch", 
  "\a3\ui_f\data\igui\cfg\actions\open_door_ca.paa", 
  "\a3\ui_f\data\igui\cfg\actions\open_door_ca.paa", 
- "_this distance _target < 5  && !(_this getVariable ['GRAD_isWelder', false])", 
- "_caller distance _target < 5  && !(_caller getVariable ['GRAD_isWelder', false])", 
+ "_this distance _target < 5  && !(_this getVariable ['GRAD_isWelder', false])&&
+  !(_target getVariable ['GRAD_Capsule_Grinded', false])", 
+ "_caller distance _target < 5  && !(_caller getVariable ['GRAD_isWelder', false])&&
+  !(_target getVariable ['GRAD_Capsule_Grinded', false])", 
  { ["Trying to open hatch...", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
  { 
 	
@@ -26,7 +28,7 @@ params ["_object"];
 	};
 },
  { ["Aborted opening", 1, [1,1,1,1], true] call CBA_fnc_notify; },
- [], 4, nil, true, false 
+ [], 4, nil, false, false 
 ] call BIS_fnc_holdActionAdd;
 
 [ 
@@ -36,10 +38,12 @@ params ["_object"];
  "\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_fire_in_flame_ca.paa", 
  "_this distance _target < 5 &&
   _this getVariable ['GRAD_isWelder', false] && 
-  !(_this getVariable ['GRAD_Capsule_Welded', false])", 
+  !(_this getVariable ['GRAD_Capsule_Welded', false]) &&
+  !(_target getVariable ['GRAD_Capsule_Grinded', false])", 
  "_caller distance _target < 5 &&
   _caller getVariable ['GRAD_isWelder', false] && 
-  !(_target getVariable ['GRAD_Capsule_Welded', false])", 
+  !(_target getVariable ['GRAD_Capsule_Welded', false])&&
+  !(_target getVariable ['GRAD_Capsule_Grinded', false])", 
  { ["Welding shut hatch...", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
  {  
 	params ["_target", "_caller", "_actionId", "_arguments", "_frame", "_maxFrame"];
@@ -95,13 +99,15 @@ params ["_object"];
 	// spawn spaceman on server
 	[[_target], "USER\scripts\spawnSpaceMan.sqf"] remoteExec ["BIS_fnc_execVM", 2];
 
+	_target setVariable ["GRAD_Capsule_Grinded", true, true];
+
 	private _soundActive = player getVariable ["grad_grinder_soundActive", objNull];
  	if (!isNull _soundActive) then {
 		deleteVehicle _soundActive;
 	};
 },
  { 
-	["Aborted welding", 1, [1,1,1,1], true] call CBA_fnc_notify;
+	["Aborted grinding", 1, [1,1,1,1], true] call CBA_fnc_notify;
  	private _soundActive = player getVariable ["grad_grinder_soundActive", objNull];
  	if (!isNull _soundActive) then {
 		deleteVehicle _soundActive;
