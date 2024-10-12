@@ -14,6 +14,8 @@ _warhead setDamage 1;
 
 [{
     hideObjectGlobal _this;
+    hideObjectGlobal submarine_hatch_1;
+    hideObjectGlobal submarine_hatch_2;
 }, _submarine, 1] call CBA_fnc_waitAndExecute;
 
 

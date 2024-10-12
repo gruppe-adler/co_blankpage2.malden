@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1675;
+		nextID=1750;
 	};
 	class Camera
 	{
-		pos[]={10760.758,12.336877,12000.799};
-		dir[]={-0.78916311,-0.59500474,0.15229113};
-		up[]={-0.58422637,0.80372256,0.11274286};
-		aside[]={0.18948206,-5.4016709e-08,0.98188561};
+		pos[]={7096.915,-5.4296241,11938.293};
+		dir[]={0.61184889,-0.41641635,-0.6725077};
+		up[]={0.28023735,0.9091686,-0.30802035};
+		aside[]={-0.73968607,-2.3341272e-07,-0.6729669};
 	};
 };
 binarizationWanted=0;
-sourceName="co_blankpage2";
+sourceName="Co_BlankPage2";
 addons[]=
 {
 	"A3_Modules_F_Heli_Misc",
@@ -818,7 +818,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -10438,7 +10438,7 @@ class Mission
 			};
 			id=2239;
 			type="ModuleEffectsBubbles_F";
-			atlOffset=9.1830692;
+			atlOffset=9.183773;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26975,18 +26975,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7099.2534,-9.8346958,11926.51};
+				position[]={7099.2529,-9.835063,11926.51};
 				angles[]={1.3144599,0.10974631,5.8173742};
 			};
 			side="Empty";
 			class Attributes
 			{
 				init="[this] execVM ""user\scripts\freeSailorsAction.sqf""; [this] call PV_Submarine_fnc_submarineSounds;";
+				name="submarine_hatch_2";
 				disableSimulation=1;
 			};
 			id=7745;
 			type="Land_Drainage_01_F";
-			atlOffset=0.62836742;
+			atlOffset=0.62800026;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27010,18 +27011,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7073.6528,-9.0412827,11943.769};
+				position[]={7073.6528,-9.0417614,11943.769};
 				angles[]={1.2610875,0.13358749,5.8232036};
 			};
 			side="Empty";
 			class Attributes
 			{
 				init="[this] execVM ""user\scripts\freeSailorsAction.sqf""; [this] call PV_Submarine_fnc_submarineSounds;";
+				name="submarine_hatch_1";
 				disableSimulation=1;
 			};
 			id=7746;
 			type="Land_Drainage_01_F";
-			atlOffset=1.6814785;
+			atlOffset=1.6809998;
 			class CustomAttributes
 			{
 				class Attribute0
