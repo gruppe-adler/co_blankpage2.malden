@@ -41,11 +41,8 @@ if (isServer) then {
 	}] call CBA_fnc_addEventhandler;
 
 
-	// make kraken hq units friendly as fuck
+	// make kraken hq units silent
 	{
-		if (_x in (playableUnits + switchableUnits)) then {
-			[_x, false] remoteExec ["setCaptive", 0, true];
-		};
 		if (_x inArea trg_kraken_hq) then {
 			_x disableAI "RADIOPROTOCOL";
 		};

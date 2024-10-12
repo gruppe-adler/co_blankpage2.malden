@@ -92,15 +92,7 @@
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
- // make kraken hq units friendly as fuck
-	{
-		if (_x in (playableUnits + switchableUnits)) then {
-			[_x, false] remoteExec ["setCaptive"];
-		};
-    if (_x inArea trg_kraken_hq) then {
-			_x enableAI "RADIOPROTOCOL";
-		};
-	} count allUnits;
+  missionNamespace setVariable ["GRAD_disableKrakenCaptive", true, true];
 
 }] call zen_custom_modules_fnc_register;
 
