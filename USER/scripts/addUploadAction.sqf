@@ -13,6 +13,8 @@ params ["_computer"];
  {
 	_target setVariable ['GRAD_intel_upload_done', true, true];
 	"Intel upload finished." call CBA_fnc_notify;
+
+	laboratory_big_screen setObjectTextureGlobal [0, "data\krakensatnet.paa"];
 },
  { "Aborted upload" call CBA_fnc_notify; }, 
  [], 10, nil, true, false 

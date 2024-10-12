@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10746.875,13.674627,11983.824};
-		dir[]={-0.39993012,-0.7466622,0.53155553};
-		up[]={-0.4489044,0.66520298,0.59664822};
-		aside[]={0.79908711,-3.5870471e-08,0.601215};
+		pos[]={9724.0889,40.752602,3864.9736};
+		dir[]={0.1037491,-0.33234233,0.93744528};
+		up[]={0.036560424,0.94314909,0.33034152};
+		aside[]={0.99394047,-2.5223198e-07,-0.11000272};
 	};
 };
 binarizationWanted=0;
@@ -23806,18 +23806,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9721.9736,39.953587,3862.5461};
-						angles[]={0,3.2603343,0};
+						position[]={9721.9736,39.953411,3862.5459};
+						angles[]={0,3.2603273,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
-						createAsSimpleObject=1;
 					};
 					id=7615;
 					type="Land_Laptop_03_sand_F";
-					atlOffset=3.8146973e-06;
+					atlOffset=0.89599991;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23848,12 +23846,26 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						name="laboratory_big_screen";
 					};
 					id=7616;
 					type="Land_TripodScreen_01_large_sand_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="data\nosignal.paa";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="allowDamage";
 							expression="_this allowdamage _value;";
@@ -23866,7 +23878,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 				class Item13
@@ -29980,7 +29992,7 @@ class Mission
 			};
 			id=7793;
 			type="B_SDV_01_F";
-			atlOffset=71.212456;
+			atlOffset=71.21241;
 		};
 	};
 	class Connections
