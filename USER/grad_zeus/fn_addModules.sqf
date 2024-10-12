@@ -95,7 +95,7 @@
  // make kraken hq units friendly as fuck
 	{
 		if (_x in (playableUnits + switchableUnits)) then {
-			_x setCaptive false;
+			[_x, false] remoteExec ["setCaptive"];
 		};
     if (_x inArea trg_kraken_hq) then {
 			_x enableAI "RADIOPROTOCOL";
@@ -221,7 +221,7 @@
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     [
-        ["KRAKEN, this is Command. Outstanding work. You’ve eliminated the threat posed by rogue KRAKEN Command, and completed all objectives. Standby for extraction. Debrief via Teamspeak when you're back in base. Command, out.", 
+        ["KRAKEN, this is SEAWATCH. Outstanding work. You’ve eliminated the threat posed by rogue KRAKEN Command, and completed all objectives. Standby for extraction. Debrief via Teamspeak when you're back in base. Command, out.", 
         "kraken_debrief", 
         15,
         false
@@ -234,7 +234,7 @@
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     [
-        ["KRAKEN, this is KRAKEN Command. You failed not only your mission but our country. Shame on you, if anyone of you is still alive, you pathetic losers. Command, out.", 
+        ["KRAKEN, this is SEAWATCH Command. You failed not only your mission but our country. Shame on you, if anyone of you is still alive, you pathetic losers. Command, out.", 
         "kraken_debrief_fail", 
         11,
         false

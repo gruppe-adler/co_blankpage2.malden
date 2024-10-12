@@ -36,7 +36,6 @@ if (isServer) then {
 		if (typeof _explosive == "vn_mine_limpet_01_ammo") then {
 			missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN_STOPPED", true, true];
 			[-1] call BIS_fnc_countdown;
-			deleteVehicle submarine_net;
 		};
 
 	}] call CBA_fnc_addEventhandler;
@@ -45,7 +44,7 @@ if (isServer) then {
 	// make kraken hq units friendly as fuck
 	{
 		if (_x in (playableUnits + switchableUnits)) then {
-			_x setCaptive true;
+			[_x, false] remoteExec ["setCaptive", 0, true];
 		};
 		if (_x inArea trg_kraken_hq) then {
 			_x disableAI "RADIOPROTOCOL";

@@ -1,12 +1,15 @@
 params ["_submarine"];
 
+deleteVehicle submarine_net;
+
 [_submarine] remoteExec ["PV_submarine_fnc_spawnEffects", [0,-2] select isDedicated, false];
 
 missionNameSpace setVariable ["GRAD_SUBMARINE_DESTROYED", true, true];
 
 [spaceCapsule] execVM "USER\scripts\untangleCapsule.sqf";
 
-private _warhead = "vn_mine_mk36" createVehicle (position _submarine);
+
+private _warhead = "vn_bomb_mk36_mine_planted" createVehicle (position _submarine);
 _warhead setDamage 1;
 
 [{
