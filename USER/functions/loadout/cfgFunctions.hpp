@@ -3,5 +3,7 @@ class BP_loadout {
     class loadout {
 		file = "USER\functions\loadout";
         class initLoadout {};
+        class addLoadoutAction {};
+        class changeLoadout {};
     };
 };

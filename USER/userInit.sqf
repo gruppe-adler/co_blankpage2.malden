@@ -12,6 +12,8 @@ if (player getVariable ["GRAD_isKraken", false]) then {
 	"mrk_kraken_hq" setMarkerAlphaLocal 1;
 };
 
+missionNamespace setVariable ["GRAD_BP_vehicle_types_action", ["rhsusf_mkvsoc", "B_Heli_EC_03_RF"]];
+
 
 if (isServer) then {
 
