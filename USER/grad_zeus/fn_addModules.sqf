@@ -88,6 +88,20 @@
 }] call zen_custom_modules_fnc_register;
 
 
+["BLANK PAGE - KRAKEN HQ", "MAKE KRAKEN HQ ENEMY",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+ // make kraken hq units friendly as fuck
+	{
+		if (_x in (playableUnits + switchableUnits)) then {
+			_x setCaptive false;
+		};
+	} count allUnits;
+
+}] call zen_custom_modules_fnc_register;
+
+
 
 
 
@@ -374,6 +388,7 @@
 
   [] call BP_OBJ2_fnc_launchAttack_Air;
 }] call zen_custom_modules_fnc_register;
+
 
 
 

@@ -39,4 +39,12 @@ if (isServer) then {
 
 	}] call CBA_fnc_addEventhandler;
 
+
+	// make kraken hq units friendly as fuck
+	{
+		if (_x in (playableUnits + switchableUnits)) then {
+			_x setCaptive true;
+		};
+	} count allUnits;
+
 };
