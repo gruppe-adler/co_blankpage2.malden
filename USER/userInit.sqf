@@ -45,6 +45,9 @@ if (isServer) then {
 		if (_x in (playableUnits + switchableUnits)) then {
 			_x setCaptive true;
 		};
+		if (_x inArea trg_kraken_hq) then {
+			_x disableAI "RADIOPROTOCOL";
+		};
 	} count allUnits;
 
 };

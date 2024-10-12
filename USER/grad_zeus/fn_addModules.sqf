@@ -97,6 +97,9 @@
 		if (_x in (playableUnits + switchableUnits)) then {
 			_x setCaptive false;
 		};
+    if (_x inArea trg_kraken_hq) then {
+			_x enableAI "RADIOPROTOCOL";
+		};
 	} count allUnits;
 
 }] call zen_custom_modules_fnc_register;
