@@ -3,7 +3,7 @@
 *   Funktioniert wie die init.sqf.
 */
 
-[] execVM "user\scripts\addTrackerAction.sqf";
+[player] execVM "user\scripts\addTrackerAction.sqf";
 
 // make KRAKEN HQ visible for kraken only
 if (player getVariable ["GRAD_isKraken", false]) then {
