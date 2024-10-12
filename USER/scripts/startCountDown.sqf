@@ -1,5 +1,18 @@
 if (isServer) then {
-    [3600, true] call BIS_fnc_countdown;
+    missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN", 3600, true];
+
+	[{
+		params ["_args", "_handle"];
+
+		private _count = missionNameSpace getVariable ["GRAD_SUBMARINE_COUNTDOWN", 3600];
+
+		if (_count > 1) then {
+			missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN", _count-1, true];
+		} else {
+			[_handle] call CBA_fnc_removePerFrameHandler;
+		};
+		
+	}, 1, []] call CBA_fnc_addPerFrameHandler;
 };
 
 
@@ -16,7 +29,7 @@ if (hasInterface) then {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 		};
 
-		private _currentTime = [0] call BIS_fnc_countdown;
+		private _currentTime = missionNameSpace getVariable ["GRAD_SUBMARINE_COUNTDOWN", 3600];
 		private _text = [_currentTime, "MM:SS"] call BIS_fnc_secondsToString;
 		submarine_display setObjectTexture [
 			0,"#(rgb,2048,2048,3)text(1,1,""RobotoCondensed"",0.02,""#ff000000"",""#ff1111""," + _text + ")"

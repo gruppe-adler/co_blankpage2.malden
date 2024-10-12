@@ -74,7 +74,8 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["BLANK PAGE", "Destroy Submarine",
+
+["BLANK PAGE - SUBMARINE", "Destroy Submarine",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -88,6 +89,19 @@
 }] call zen_custom_modules_fnc_register;
 
 
+["BLANK PAGE - SUBMARINE", "Reset Counter to 60mins",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+  missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN", 3600, true];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+
+
 ["BLANK PAGE - KRAKEN HQ", "MAKE KRAKEN HQ ENEMY",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -95,7 +109,6 @@
   missionNamespace setVariable ["GRAD_disableKrakenCaptive", true, true];
 
 }] call zen_custom_modules_fnc_register;
-
 
 
 
