@@ -348,7 +348,7 @@
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     [
-        ["SEAWATCH, this is Command. We’ve received confirmation of the helicopter assault on the lab. The enemy has been traced back to their base at grid coordinates 057 024. KRAKEN forces will be launching a counter-attack, and you are to provide immediate support. Expect coordinated resistance. Ensure communication and teamwork with KRAKEN to complete this operation efficiently. Command, out.", 
+        ["SEAWATCH, this is Command. SEAWATCH, this is Command. We’ve successfully received the Omega-17 intel package from your mission. The data includes critical information on KRAKEN Cmd activities. Our analysts are working to decrypt and process the full content. Given the volume and sensitivity of the intel, we’ll need some time to complete the analysis. We’ve received confirmation of the helicopter assault on the lab. The enemy has been traced back to their base at grid coordinates 057 024. KRAKEN forces will be launching a counter-attack, and you are to provide immediate support. Expect coordinated resistance. Ensure communication and teamwork with KRAKEN to complete this operation efficiently. Command, out.", 
         "intel_received_new", 
         40,
         false
