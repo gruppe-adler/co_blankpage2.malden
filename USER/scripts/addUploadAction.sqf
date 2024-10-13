@@ -9,11 +9,20 @@ params ["_computer"];
  [_this, 'FlashDisk'] call bIs_fnc_hasitem", 
  "_caller  distance _target < 3", 
  { ["Starting upload...", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
- {  }, 
+ {  [] spawn {
+			for "_i" from 1 to 2 do { 
+				playSound3D [getMissionPath "USER\sounds\" + selectRandom ["keypad_1", "keypad_2", "keypad_3"] + ".ogg", player, false, getPosASL player, 5] remoteExec ["say3D", 20];
+				sleep (0.05 + random 0.05);
+		 	};
+		};
+		true
+ }, 
  {
 	params ["_target"];
 	_target setVariable ['GRAD_intel_upload_done', true, true];
 	["Intel upload finished.", 1, [1,1,1,1], true] call CBA_fnc_notify;
+
+	[_target, "USER\scripts\uploadIntel.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 	laboratory_big_screen setObjectTextureGlobal [0, "data\krakensatnet.paa"];
 },
@@ -39,3 +48,6 @@ params ["_computer"];
  { ["Aborted inspect", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
  [], 1, nil, true, false 
 ] call BIS_fnc_holdActionAdd;
+
+// caching of the textures to prevent flickering later on
+[_target, "USER\scripts\uploadIntel.sqf"] remoteExec ["BIS_fnc_execVM"];

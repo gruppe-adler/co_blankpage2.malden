@@ -28,6 +28,28 @@ class garble_long
 };
 
 
+class keypad_1
+{
+    name = "keypad_1";
+    sound[] = {"USER\sounds\keypad_1.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class keypad_2
+{
+    name = "keypad_2";
+    sound[] = {"USER\sounds\keypad_2.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class keypad_3
+{
+    name = "keypad_3";
+    sound[] = {"USER\sounds\keypad_3.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+
 
 class kraken_1
 {

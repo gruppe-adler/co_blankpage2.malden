@@ -2,43 +2,38 @@ params ["_intel"];
 
 
 private _text = "
-Intel Document #1: Financial Transaction Records\n
-TOP SECRET\n\n
+\n TOP SECRET\n\n
+From: kraken.command@[redacted].gov\n
+To: iv.volkov@russianmil.ru\n
+Date: [Mission date - 4 weeks]\n
+Subject: Operational Support - Phase 2\n\n
 
-From: Office of Naval Intelligence, Financial Surveillance Division\n
-To: [Redacted]\n
-Subject: Suspicious Financial Transfers – Kraken Command Investigation\n
-Date: [Mission date - 1 month]\n\n
+Message:\n\n
 
-Summary of Transactions:\n\n
+Our surveillance teams have completed the recon on the American\n
+convoy schedule. You will receive full details on the movements\n
+in two days. Ensure your teams stay clear of our patrols until the\n
+assault begins. I will continue to divert attention away from the\n
+northern sector.\n\n
 
-Transaction 1:\n
-Sender: Igor Volkov (Russian Armed Forces, Special Account 3221)\n
-Receiver: Offshore Account #8412 [Name Redacted]\n
-Amount: $250,000 USD\n
-Date: [Mission date - 3 months]\n
-Note: Operation Kraken – Initial Phase\n\n
+My superiors remain unaware of our cooperation, but I require further\n
+payment before we can proceed with Phase 3. We are nearing the final\n
+stages, and once the package is delivered, our arrangement will be\n
+complete. Make sure the funds are transferred immediately.\n\n
 
-Transaction 2:\n
-Sender: Igor Volkov (Russian Armed Forces, Special Account 3221)\n
-Receiver: [Redacted American Bank Account #XXXX]\n
-Amount: $500,000 USD\n
-Date: [Mission date - 2 weeks]\n
-Note: Recon Reports and Movement Intel – Cleared for Kraken\n\n
-
-
-Transaction 3:\n
-Sender: Volkov Holdings (Russian Front Company)\n
-Receiver: [Redacted]\n
-Amount: $150,000 USD\n
-Date: [Mission date - 1 week]\n
-Note: Completion Bonus – Operation Success Pending\n
+I trust you will handle this with your usual discretion.\n\n
+----\n\n
+Reply from Volkov:\n\n
+Funds will be transferred by the end of the week. Phase 3 is\n
+already being prepped. Remember, this operation benefits both\n
+of us. Stay the course, and you will have more than just money\n
+when this is done.
 ";
 
 
 
 
-private _texture = "#(rgb,2048,2048,3)text(0,0,""LucidaConsoleB"",0.025,""#000000"",""#33ff33""," + _text + ")";
+private _texture = "#(rgb,2048,2048,3)text(0,0,""LucidaConsoleB"",0.02,""#000000"",""#33ff33""," + _text + ")";
 
 _intel setvariable ["bis_fnc_initInspectable_data",[_texture,_text,"",1]];
 

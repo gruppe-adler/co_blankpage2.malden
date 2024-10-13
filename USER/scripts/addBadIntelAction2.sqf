@@ -2,36 +2,29 @@ params ["_intel"];
 
 
 private _text = "
-Intel Document #1: Financial Transaction Records\n
-TOP SECRET\n\n
-
+ \nTOP SECRET\n\n
 From: Office of Naval Intelligence, Financial Surveillance Division\n
 To: [Redacted]\n
-Subject: Suspicious Financial Transfers – Kraken Command Investigation\n
-Date: [Mission date - 1 month]\n\n
-
+Subject: Financial Transfers – Kraken Command\n
+Date: 2035-04-01\n\n
 Summary of Transactions:\n\n
-
 Transaction 1:\n
 Sender: Igor Volkov (Russian Armed Forces, Special Account 3221)\n
 Receiver: Offshore Account #8412 [Name Redacted]\n
 Amount: $250,000 USD\n
-Date: [Mission date - 3 months]\n
+Date: Date: 2035-04-03\n
 Note: Operation Kraken – Initial Phase\n\n
-
 Transaction 2:\n
 Sender: Igor Volkov (Russian Armed Forces, Special Account 3221)\n
 Receiver: [Redacted American Bank Account #XXXX]\n
 Amount: $500,000 USD\n
-Date: [Mission date - 2 weeks]\n
+Date: Date: 2035-05-27\n
 Note: Recon Reports and Movement Intel – Cleared for Kraken\n\n
-
-
 Transaction 3:\n
 Sender: Volkov Holdings (Russian Front Company)\n
 Receiver: [Redacted]\n
 Amount: $150,000 USD\n
-Date: [Mission date - 1 week]\n
+Date: 2035-06-01\n
 Note: Completion Bonus – Operation Success Pending\n
 ";
 
@@ -108,7 +101,14 @@ if (isnil {_intel getvariable "bis_fnc_initInspectable_actionID"}) then {
 	"_this distance _target < 3", 
 	"_caller  distance _target < 3", 
 	{ ["Destroying...", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
-	{  }, 
+	{ [] spawn {
+			for "_i" from 1 to 2 do { 
+				playSound3D [getMissionPath "USER\sounds\" + selectRandom ["keypad_1", "keypad_2", "keypad_3"] + ".ogg", player, false, getPosASL player, 5] remoteExec ["say3D", 20];
+				sleep (0.05 + random 0.05);
+		 	};
+		};
+		true
+	}, 
 	{
 		params ["_target"];
 
