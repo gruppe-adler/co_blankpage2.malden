@@ -1,6 +1,6 @@
-params ["_posASL", "_surfaceNormal", "_intersectObject", "_finalPoint"]; 
+params ["_posASL"]; 
      
-private _lightSource = "#lightpoint" createVehicleLocal ASLtoAGL (_finalPoint); 
+private _lightSource = "#lightpoint" createVehicleLocal ASLtoAGL (_posASL); 
 
 _lightSource setLightColor [1, .5, .8];  
 _lightSource setLightAmbient [1, .8, .9];  

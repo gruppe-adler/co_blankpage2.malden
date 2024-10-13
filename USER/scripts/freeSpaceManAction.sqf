@@ -50,8 +50,9 @@ params ["_object"];
 	private _capsule = cursorObject;
 	if (typeOf _capsule == "SpaceshipCapsule_01_F") then {
 		private _distance = player distance _capsule;
-		private _position = AGLToASL positionCameraToWorld [0,0,_distance/4]; // middle between player and capsule
-		[_position] remoteExec ["grad_grinder_fnc_sparkClient"];
+		private _position = AGLToASL (positionCameraToWorld [0,0,0.5]);
+  		[_position] remoteExec ["grad_grinder_fnc_sparkClient"]; 
+  		[_position] remoteExec ["grad_grinder_fnc_lightClient"]; 
 	};
 	// condition to progress always true
 	true
@@ -88,8 +89,9 @@ params ["_object"];
 	private _capsule = cursorObject;
 	if (typeOf _capsule == "SpaceshipCapsule_01_F") then {
 		private _distance = player distance _capsule;
-		private _position = AGLToASL positionCameraToWorld [0,0,_distance/2]; // middle between player and capsule
-		[_position] remoteExec ["grad_grinder_fnc_sparkClient"];		
+		private _position = AGLToASL (positionCameraToWorld [0,0,0.5]);
+  		[_position] remoteExec ["grad_grinder_fnc_sparkClient"]; 
+  		[_position] remoteExec ["grad_grinder_fnc_lightClient"]; 	
 	};
 	// condition to progress always true
 	true
