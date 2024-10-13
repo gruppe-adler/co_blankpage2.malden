@@ -10,7 +10,13 @@
 // make KRAKEN HQ visible for kraken only
 if (player getVariable ["GRAD_isKraken", false]) then {
 	"mrk_kraken_hq" setMarkerAlphaLocal 1;
+} else {
+	"mrk_seawatch_hq" setMarkerAlphaLocal 1;
 };
+
+// add custom BFT, disable ace BFT
+[] execVM "user\scripts\customBFT.sqf";
+
 
 missionNamespace setVariable ["GRAD_BP_vehicle_types_action", ["rhsusf_mkvsoc", "B_Heli_EC_03_RF"]];
 
