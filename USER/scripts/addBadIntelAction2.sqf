@@ -36,7 +36,7 @@ private _texture = "#(rgb,2048,2048,3)text(0,0,""LucidaConsoleB"",0.025,""#00000
 _intel setvariable ["bis_fnc_initInspectable_data",[_texture,_text,"",1]];
 
 _intel setObjectTexture ["monitor", _texture];
-_intel setObjectTexture ["pad", "data\putin.paa"];
+_intel setObjectTexture ["pad", "data\putin2.paa"];
 
 
 //--- Add action
