@@ -9,3 +9,8 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 if (player getVariable ["grad_iskraken", false]) then {
     player setCaptive true;
 };
+
+if ((typeOf player) isNotEqualTo "B_Helipilot_F") then {
+    sleep 20;
+    [] call BP_LOADOUT_fnc_addLoadoutAction;
+};

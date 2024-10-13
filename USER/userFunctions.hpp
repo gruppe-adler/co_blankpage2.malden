@@ -9,3 +9,4 @@
 #include "grad_grasscutter\cfgFunctions.hpp"
 #include "functions\objective_2\cfgFunctions.hpp"
 #include "functions\loadout\cfgFunctions.hpp"
+#include "functions\krakenAmbush\cfgFunctions.hpp"

@@ -65,7 +65,7 @@ _unit setUnitLoadout _currentLoadout;
 
 if (!isPlayer _unit) exitWith {};
 
-[] spawn {
-	sleep 20;
-	[] call BP_LOADOUT_fnc_addLoadoutAction;
-};
+// [] spawn {
+// 	sleep 20;
+// 	[] call BP_LOADOUT_fnc_addLoadoutAction;
+// };
