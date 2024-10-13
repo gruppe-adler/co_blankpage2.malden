@@ -97,17 +97,20 @@ if (isnil {_intel getvariable "bis_fnc_initInspectable_actionID"}) then {
  "Destroy Intel", 
  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", 
  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", 
- "_this distance _target < 3", 
+ "_this distance _target < 3 && !(_target getVariable ['GRad_intelDestroyed', false)", 
  "_caller  distance _target < 3", 
  { ["Destroying...", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
  {  }, 
  {
 	params ["_target"];
 	playSound3D [getMissionPath "USER\sounds\crumple.ogg", _target, false, getPosASL _target, 5] remoteExec ["say3D", 20];
-	hideObjectGlobal _target;
+	
+	[_target, true] remoteExec ["hideObjectGlobal", 2];
 	["Destroyed evidence.", 1, [1,1,1,1], true] call CBA_fnc_notify;
 
 	["GRAD_intelDestroyed1", []] call CBA_fnc_globalEvent;
+
+	_target setVariable ["grad_intelDestroyed", true, true];
 
 },
  { ["Aborted destruction", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 

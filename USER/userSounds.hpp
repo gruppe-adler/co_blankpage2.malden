@@ -218,3 +218,11 @@ class sendregards
     sound[] = {"USER\sounds\sendregards.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+class intel_received_new
+{
+    name = "intel_received_new";
+    sound[] = {"USER\sounds\intel_received_new.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};

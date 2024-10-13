@@ -72,10 +72,11 @@ params ["_object"];
  "\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_fire_in_flame_ca.paa", 
  "\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_fire_in_flame_ca.paa", 
  "_this distance _target < 5 &&
-  _this getVariable ['GRAD_isGrinder', false]", 
+  _this getVariable ['GRAD_isGrinder', false] &&
+  !(_target getVariable ['GRAD_Capsule_Grinded', false])", 
  "_caller distance _target < 5 &&
   _caller getVariable ['GRAD_isGrinder', false] && 
-  (_target getVariable ['GRAD_Capsule_Welded', false])", 
+  _target distance laboratory_big_screen < 100", 
  { ["Grinding hatch open...", 1, [1,1,1,1], true] call CBA_fnc_notify;
  	private _soundActive = createSoundSource ["sfxgrinderactive", player, [], 0];
 	_soundActive attachTo [player, [0,0,0], "righthand", true];

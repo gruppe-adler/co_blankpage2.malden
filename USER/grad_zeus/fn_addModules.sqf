@@ -230,7 +230,7 @@
 
 
 
-["BLANK PAGE - KRAKEN", "6 - Lay trap",
+["BLANK PAGE - KRAKEN", "7 - Lay trap",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -243,7 +243,7 @@
 
 }] call zen_custom_modules_fnc_register;
 
-["BLANK PAGE - KRAKEN", "7 - Deny accusations",
+["BLANK PAGE - KRAKEN", "8 - Deny accusations",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -256,7 +256,7 @@
 
 }] call zen_custom_modules_fnc_register;
 
-["BLANK PAGE - KRAKEN", "8 - Help defend HQ",
+["BLANK PAGE - KRAKEN", "9 - Help defend HQ",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -343,47 +343,19 @@
 
 }] call zen_custom_modules_fnc_register;
 
-["BLANK PAGE - SEAWATCH", "3 - Thanks for the intel",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-    [
-        ["SEAWATCH, this is Command. We’ve successfully received the Omega-17  intel package from your mission. The data includes critical information  on KRAKEN Cmd activities.  Our analysts are working to decrypt and process the full content. Given  the volume and sensitivity of the intel, we’ll need some time to  complete the analysis.  Further instructions will follow once we’ve assessed the situation.  SEAWATCH COMMAND, out.", 
-        "seawatch_intel_received", 
-        30,
-        false
-    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-}] call zen_custom_modules_fnc_register;
-
-
-["BLANK PAGE - SEAWATCH", "4 - Counter attack",
+["BLANK PAGE - SEAWATCH", "4 - Thanks 4 Intel & Counter attack",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     [
         ["SEAWATCH, this is Command. We’ve received confirmation of the helicopter assault on the lab. The enemy has been traced back to their base at grid coordinates 057 024. KRAKEN forces will be launching a counter-attack, and you are to provide immediate support. Expect coordinated resistance. Ensure communication and teamwork with KRAKEN to complete this operation efficiently. Command, out.", 
-        "seawatch_counterattack", 
-        29,
+        "intel_received_new", 
+        40,
         false
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 }] call zen_custom_modules_fnc_register;
 
-
-
-["BLANK PAGE - SEAWATCH", "4 - Attack KRAKEN HQ",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-    [
-        ["SEAWATCH, this is Command. We've decrypted the intel from the capsule and it contains alarming information: KRAKEN's commander has been compromised. He has committed treason and is operating under rogue orders. KRAKEN seems to be unknowingly following his lead. Your mission has changed. You are to proceed to KRAKEN Command’s location at grid coordinates 107 120. Engage and neutralize the rogue commander. However, do your best to inform KRAKEN of the situation before hostilities break out. If you can convince them of the commander’s true intentions, they may support your assault. Mission priority is eliminating KRAKEN Command, but avoid friendly casualties if possible. Command out.", 
-        "seawatch_4", 
-        49,
-        false
-    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-}] call zen_custom_modules_fnc_register;
 
 ["BLANK PAGE - SEAWATCH", "5 - Convince KRAKEN",
 {
@@ -397,6 +369,21 @@
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 }] call zen_custom_modules_fnc_register;
+
+["BLANK PAGE - SEAWATCH", "6 - Attack KRAKEN HQ",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["SEAWATCH, this is Command. We've decrypted the intel from the capsule and it contains alarming information: KRAKEN's commander has been compromised. He has committed treason and is operating under rogue orders. KRAKEN seems to be unknowingly following his lead. Your mission has changed. You are to proceed to KRAKEN Command’s location at grid coordinates 107 120. Engage and neutralize the rogue commander. However, do your best to inform KRAKEN of the situation before hostilities break out. If you can convince them of the commander’s true intentions, they may support your assault. Mission priority is eliminating KRAKEN Command, but avoid friendly casualties if possible. Command out.", 
+        "seawatch_4", 
+        49,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
 
 ["BLANK PAGE - SEAWATCH DEBRIEF", "SUCCESS",
 {

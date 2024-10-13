@@ -98,7 +98,7 @@ if (isnil {_intel getvariable "bis_fnc_initInspectable_actionID"}) then {
 	"Destroy Intel", 
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", 
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", 
-	"_this distance _target < 3", 
+	"_this distance _target < 3 && !(_target getVariable ['GRad_intelDestroyed', false)", 
 	"_caller  distance _target < 3", 
 	{ ["Destroying...", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
 	{ [] spawn {
@@ -129,6 +129,8 @@ if (isnil {_intel getvariable "bis_fnc_initInspectable_actionID"}) then {
 	["Destroyed evidence.", 1, [1,1,1,1], true] call CBA_fnc_notify;
 
 	["GRAD_intelDestroyed2", []] call CBA_fnc_globalEvent;
+
+	_target setVariable ["GRad_intelDestroyed", true, true];
 
 },
  { ["Aborted destruction", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 

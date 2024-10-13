@@ -182,7 +182,7 @@ _linesArray joinString "\n";
 		_messageDisplay = "\nLoading: [" + _progressBar + "] \n" + format ["%1%%", round (_currentLineIndex / _totalLines * 100)] + _messageDisplay; // Append loading bar
 		
 		// Show the current line on the laptop
-		_laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.04,""#000000"",""#33ff33""," + _messageDisplay + ")"];
+		_laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.035,""#000000"",""#33ff33""," + _messageDisplay + ")"];
 		
 		// Increment the line index and count for the next iteration
 		_currentLineIndex = _currentLineIndex + 1; // Move to the next line
@@ -193,10 +193,10 @@ _linesArray joinString "\n";
 		
 		sleep 1;
 				_messageDisplay = "\n UPLOAD COMPLETE: [" + _progressBar + "] \n" + format ["%1%%", 100]; // Append loading bar
-				 _laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.04,""#000000"",""#33ff33""," + _messageDisplay + ")"];
+				 _laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.035,""#000000"",""#33ff33""," + _messageDisplay + ")"];
 
 		sleep 10;
-		_laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.04,""#000000"",""#33ff33""," + "" + ")"];
+		_laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.035,""#000000"",""#33ff33""," + "" + ")"];
 
 		}; // Exit if no more lines to display
 		

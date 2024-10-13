@@ -48,7 +48,7 @@ params ["_object"];
  {  
 	params ["_target", "_caller", "_actionId", "_arguments", "_frame", "_maxFrame"];
 	private _capsule = cursorObject;
-	if (typeOf _capsule == "SpaceshipCapsule_01_F") then {
+	if (typeOf _capsule == "Land_Drainage_01_F") then {
 		private _distance = player distance _capsule;
 		private _position = AGLToASL positionCameraToWorld [0,0,_distance/4]; // middle between player and capsule
 		[_position] remoteExec ["grad_grinder_fnc_sparkClient"];
