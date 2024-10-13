@@ -158,3 +158,25 @@ class kraken_debrief_fail
     sound[] = {"USER\sounds\kraken_debrief_fail.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
+
+
+class seawatch_counterattack
+{
+    name = "seawatch_counterattack";
+    sound[] = {"USER\sounds\seawatch_counterattack.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class kraken_counterattack
+{
+    name = "kraken_counterattack";
+    sound[] = {"USER\sounds\kraken_counterattack.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class seawatch_intel_received
+{
+    name = "seawatch_intel_received";
+    sound[] = {"USER\sounds\seawatch_intel_received.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};

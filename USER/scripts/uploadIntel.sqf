@@ -194,6 +194,10 @@ _linesArray joinString "\n";
 		sleep 1;
 				_messageDisplay = "\n UPLOAD COMPLETE: [" + _progressBar + "] \n" + format ["%1%%", 100]; // Append loading bar
 				 _laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.04,""#000000"",""#33ff33""," + _messageDisplay + ")"];
+
+		sleep 10;
+		_laptop setObjectTexture ["Screen_1", "#(rgb,512,512,3)text(0,0,""LucidaConsoleB"",0.04,""#000000"",""#33ff33""," + "" + ")"];
+
 		}; // Exit if no more lines to display
 		
 		// Slow down the loop to simulate typing (0.1 second delay)

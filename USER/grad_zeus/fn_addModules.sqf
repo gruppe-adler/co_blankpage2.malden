@@ -182,6 +182,24 @@
 
 }] call zen_custom_modules_fnc_register;
 
+
+["BLANK PAGE - KRAKEN", "6 - Counter attack",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["KRAKEN, this is Command. The helicopter assault on the lab has been confirmed. Intel traces the enemy’s origin to a base at grid coordinates 057 024. Expect heavy resistance—this is a fortified position. SEAWATCH will be supporting you during this counter-attack. Coordinate with their units to neutralize the threat and secure the area. Command, out.", 
+        "kraken_counterattack", 
+        25,
+        true
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+
 ["BLANK PAGE - KRAKEN", "6 - Lay trap",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -294,6 +312,35 @@
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 }] call zen_custom_modules_fnc_register;
+
+["BLANK PAGE - SEAWATCH", "3 - Thanks for the intel",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["SEAWATCH, this is Command. We’ve successfully received the Omega-17  intel package from your mission. The data includes critical information  on KRAKEN Cmd activities.  Our analysts are working to decrypt and process the full content. Given  the volume and sensitivity of the intel, we’ll need some time to  complete the analysis.  Further instructions will follow once we’ve assessed the situation.  SEAWATCH COMMAND, out.", 
+        "seawatch_intel_received", 
+        30,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+["BLANK PAGE - SEAWATCH", "4 - Counter attack",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["SEAWATCH, this is Command. We’ve received confirmation of the helicopter assault on the lab. The enemy has been traced back to their base at grid coordinates 057 024. KRAKEN forces will be launching a counter-attack, and you are to provide immediate support. Expect coordinated resistance. Ensure communication and teamwork with KRAKEN to complete this operation efficiently. Command, out.", 
+        "seawatch_counterattack", 
+        29,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
 
 ["BLANK PAGE - SEAWATCH", "4 - Attack KRAKEN HQ",
 {
