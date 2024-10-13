@@ -48,6 +48,7 @@ private _tempGroups = [];
 			private _unit = _grp createUnit [_x, [random 25, random 25, 0], [], 0, "NONE"];
 			_unit assignAsCargo _currentHeli;
 			_unit moveInCargo _currentHeli;
+			sleep 0.5;
 		} forEach _unitArr;
 	};
 	_groups pushBack _tempGroups;

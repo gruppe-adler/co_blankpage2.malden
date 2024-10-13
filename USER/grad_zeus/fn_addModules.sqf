@@ -118,7 +118,7 @@
   {
     private _isInArea = _x inArea trg_kraken_hq;
     [_x, "ALL"] remoteExec ["disableAI", _x];
-  } forEach allUnits select { _x inArea trg_kraken_hq; };
+  } forEach (allUnits select { _x inArea trg_kraken_hq; });
 
   ["GRAD_krakenhq_disableAI"] call CBA_fnc_globalEvent;
 
@@ -132,7 +132,7 @@
   {
     [_x, "ALL"] remoteExec ["enableAI", _x];
     [_x, "PATH"] remoteExec ["disableAI", _x];
-  } forEach allUnits select { _x inArea trg_kraken_hq; };
+  } forEach (allUnits select { _x inArea trg_kraken_hq; });
 
   ["GRAD_krakenhq_enableAI"] call CBA_fnc_globalEvent;
 
