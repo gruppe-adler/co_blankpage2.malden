@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9488.1377,10.932743,6918.8799};
-		dir[]={-0.27762389,-0.55922747,0.78114748};
-		up[]={-0.18727686,0.82901418,0.52693921};
-		aside[]={0.94226116,3.4691766e-08,0.33488455};
+		pos[]={9527.1006,50.177628,6888.3081};
+		dir[]={-0.60306972,-0.64252979,0.47272101};
+		up[]={-0.50568962,0.7662605,0.39638898};
+		aside[]={0.61691928,-6.8888767e-08,0.7870295};
 	};
 };
 binarizationWanted=0;
@@ -33000,7 +33000,7 @@ class Mission
 			class Attributes
 			{
 				condition="this && !(missionNameSpace getVariable [""GRAD_traptriggered"", false])";
-				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container1, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 1;" \n "{ _x enableAI ""ALL""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "};";
+				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container1, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 1;" \n "{ _x enableAI ""ALL""; _x disableAI ""PATH""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "[""GRAD_traptriggered"", []] call CBA_fnc_globalEvent;" \n "};";
 				sizeA=0.89999998;
 				sizeB=4;
 				sizeC=5;
@@ -33020,7 +33020,7 @@ class Mission
 			class Attributes
 			{
 				condition="this && !(missionNameSpace getVariable [""GRAD_traptriggered"", false])";
-				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container2, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 1;" \n "{ _x enableAI ""ALL""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "};";
+				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container2, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 1;" \n "{ _x enableAI ""ALL""; _x disableAI ""PATH""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "[""GRAD_traptriggered"", []] call CBA_fnc_globalEvent;" \n "};";
 				sizeA=0.89999998;
 				sizeB=4;
 				sizeC=5;

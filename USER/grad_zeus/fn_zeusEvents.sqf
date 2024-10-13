@@ -164,3 +164,16 @@ if (!isServer) exitWith {};
 }] call CBA_fnc_addEventHandler;
 
 
+["GRAD_traptriggered", {
+
+    // send message to all curators
+    {
+        private _playerAsZeus = getAssignedCuratorUnit _x;
+        if (!isNull _playerAsZeus) then {
+            private _color = [1,0,0.1,1];
+            ["Trap was triggered", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+        };
+    } forEach allCurators;
+}] call CBA_fnc_addEventHandler;
+
+
