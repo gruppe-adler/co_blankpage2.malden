@@ -8,8 +8,8 @@ if (isServer) then {
 
 		if (missionNameSpace getVariable ["GRAD_SUBMARINE_COUNTDOWN_STOPPED", false]) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
+			["GRAD_submarine_countdown_stopped"] call CBA_fnc_globalEvent;
 		};
-
 
 		if (_count > 1) then {
 			missionNameSpace setVariable ["GRAD_SUBMARINE_COUNTDOWN", _count-1, true];

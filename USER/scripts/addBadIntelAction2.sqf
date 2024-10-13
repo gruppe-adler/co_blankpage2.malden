@@ -36,7 +36,7 @@ private _texture = "#(rgb,2048,2048,3)text(0,0,""LucidaConsoleB"",0.025,""#00000
 _intel setvariable ["bis_fnc_initInspectable_data",[_texture,_text,"",1]];
 
 _intel setObjectTexture ["monitor", _texture];
-_intel setObjectTexture ["pad", "data\fearme.paa"];
+_intel setObjectTexture ["pad", "data\putin.paa"];
 
 
 //--- Add action
@@ -128,7 +128,9 @@ if (isnil {_intel getvariable "bis_fnc_initInspectable_actionID"}) then {
 
 	["Destroyed evidence.", 1, [1,1,1,1], true] call CBA_fnc_notify;
 
+	["GRAD_intelDestroyed2", []] call CBA_fnc_globalEvent;
+
 },
  { ["Aborted destruction", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
- [], 1, nil, true, false 
+ [], 10, nil, false, false 
 ] call BIS_fnc_holdActionAdd;

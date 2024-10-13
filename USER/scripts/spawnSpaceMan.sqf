@@ -12,3 +12,12 @@ _spaceman allowDamage false;
 [{
 	_this allowDamage true;
 }, _spaceman, 3] call CBA_fnc_waitAndExecute;
+
+
+_spaceman addMPEventHandler ["MPKilled", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	
+	if (local _unit) then {
+		["GRAD_astronautKilled", []] call CBA_fnc_globalEvent;
+	};
+}];

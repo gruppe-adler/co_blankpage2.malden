@@ -13,5 +13,5 @@ params ["_object"];
 	["No chance, the hatch is stuck :/", 1, [1,1,1,1], true] call CBA_fnc_notify;
 },
  { ["Aborted opening", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
- [], 10, nil, true, false 
+ [], 10, nil, false, false 
 ] call BIS_fnc_holdActionAdd;

@@ -33,7 +33,8 @@ when this is done.
 
 
 
-private _texture = "#(rgb,2048,2048,3)text(0,0,""LucidaConsoleB"",0.02,""#000000"",""#33ff33""," + _text + ")";
+private _texture = "#(rgb,2048,2048,3)text(0,0,""LucidaConsoleB"",0.02,""#ffffff"",""#000000""," + _text + ")";
+_intel setObjectTexture ["camo", _texture];
 
 _intel setvariable ["bis_fnc_initInspectable_data",[_texture,_text,"",1]];
 
@@ -102,10 +103,13 @@ if (isnil {_intel getvariable "bis_fnc_initInspectable_actionID"}) then {
  {  }, 
  {
 	params ["_target"];
-	deleteVehicle _target;
+	playSound3D [getMissionPath "USER\sounds\crumple.ogg", _target, false, getPosASL _target, 5] remoteExec ["say3D", 20];
+	hideObjectGlobal _target;
 	["Destroyed evidence.", 1, [1,1,1,1], true] call CBA_fnc_notify;
+
+	["GRAD_intelDestroyed1", []] call CBA_fnc_globalEvent;
 
 },
  { ["Aborted destruction", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
- [], 10, nil, true, false 
+ [], 10, nil, false, false 
 ] call BIS_fnc_holdActionAdd;

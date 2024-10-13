@@ -114,5 +114,5 @@ params ["_object"];
 		deleteVehicle _soundActive;
 	};
   }, 
- [], 10, nil, true, false 
+ [], 10, nil, false, false 
 ] call BIS_fnc_holdActionAdd;

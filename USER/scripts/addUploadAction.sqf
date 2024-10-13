@@ -24,10 +24,12 @@ params ["_computer"];
 
 	[_target, "USER\scripts\uploadIntel.sqf"] remoteExec ["BIS_fnc_execVM"];
 
+	["GRAD_intel_upload_completed", []] call CBA_fnc_globalEvent;
+
 	laboratory_big_screen setObjectTextureGlobal [0, "data\krakensatnet.paa"];
 },
  { ["Aborted upload", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
- [], 10, nil, true, false 
+ [], 10, nil, false, false 
 ] call BIS_fnc_holdActionAdd;
 
 [ 
@@ -42,12 +44,11 @@ params ["_computer"];
  {  }, 
  {
 	params ["_target"];
-	_target setVariable ['GRAD_intel_upload_done', true, true];
 	["If I had something to stick into the data slot, I would do it.", 1, [1,1,1,1], true] call CBA_fnc_notify;
 },
  { ["Aborted inspect", 1, [1,1,1,1], true] call CBA_fnc_notify; }, 
- [], 1, nil, true, false 
+ [], 1, nil, false, false 
 ] call BIS_fnc_holdActionAdd;
 
 // caching of the textures to prevent flickering later on
-[_target, "USER\scripts\uploadIntel.sqf"] remoteExec ["BIS_fnc_execVM"];
+[_computer, "USER\scripts\uploadIntel.sqf"] remoteExec ["BIS_fnc_execVM"];

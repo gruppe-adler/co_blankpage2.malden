@@ -50,6 +50,14 @@ class keypad_3
 };
 
 
+class crumple
+{
+    name = "crumple";
+    sound[] = {"USER\sounds\crumple.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+
 
 class kraken_1
 {
@@ -200,5 +208,13 @@ class seawatch_intel_received
 {
     name = "seawatch_intel_received";
     sound[] = {"USER\sounds\seawatch_intel_received.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+class sendregards
+{
+    name = "sendregards";
+    sound[] = {"USER\sounds\sendregards.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };

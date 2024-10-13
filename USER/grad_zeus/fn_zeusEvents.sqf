@@ -56,35 +56,111 @@ if (!isServer) exitWith {};
 }] call CBA_fnc_addEventHandler;
 
 
-["GRAD_telephone_callStart", {
-    params ["_player1", "_player2"];
-
+["GRAD_intel_upload_completed", {
 
     // send message to all curators
     {
         private _playerAsZeus = getAssignedCuratorUnit _x;
         if (!isNull _playerAsZeus) then {
-            private _namePlayer1 = _player1 getVariable ['ACE_name', 'no name'];
-            private _namePlayer2 = _player2 getVariable ['ACE_name', 'no name'];
             private _color = [0.1,0.5,0.1,1];
-            [(_namePlayer1 + " call STARTED with " + _namePlayer2), _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+            ["INTEL UPLOAD COMPLETE!", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
         };
     } forEach allCurators;
 }] call CBA_fnc_addEventHandler;
 
 
-["GRAD_telephone_callEnded", {
-    params ["_player1", "_player2"];
+["GRAD_submarine_countdown_stopped", {
 
     // send message to all curators
     {
         private _playerAsZeus = getAssignedCuratorUnit _x;
         if (!isNull _playerAsZeus) then {
-            private _namePlayer1 = _player1 getVariable ['ACE_name', 'no name'];
-            private _namePlayer2 = _player2 getVariable ['ACE_name', 'no name'];
             private _color = [0.1,0.5,0.1,1];
-            [(_namePlayer1 + " call ENDED with " + _namePlayer2), _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+            ["COUNTDOWN SUBMARINE STOPPED!", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
         };
     } forEach allCurators;
 }] call CBA_fnc_addEventHandler;
+
+
+["GRAD_playersCaptive", {
+
+    // send message to all curators
+    {
+        private _playerAsZeus = getAssignedCuratorUnit _x;
+        if (!isNull _playerAsZeus) then {
+            private _color = [0.1,0.5,0.1,1];
+            ["KRAKEN HQ is enemy", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+        };
+    } forEach allCurators;
+}] call CBA_fnc_addEventHandler;
+
+
+["GRAD_krakenhq_disableAI", {
+
+    // send message to all curators
+    {
+        private _playerAsZeus = getAssignedCuratorUnit _x;
+        if (!isNull _playerAsZeus) then {
+            private _color = [1,0.5,0.1,1];
+            ["KRAKEN HQ is disabled", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+        };
+    } forEach allCurators;
+}] call CBA_fnc_addEventHandler;
+
+
+
+["GRAD_krakenhq_enableAI", {
+
+    // send message to all curators
+    {
+        private _playerAsZeus = getAssignedCuratorUnit _x;
+        if (!isNull _playerAsZeus) then {
+            private _color = [0.1,1,0.1,1];
+            ["KRAKEN HQ is enabled", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+        };
+    } forEach allCurators;
+}] call CBA_fnc_addEventHandler;
+
+
+
+
+
+["GRAD_intelDestroyed1", {
+
+    // send message to all curators
+    {
+        private _playerAsZeus = getAssignedCuratorUnit _x;
+        if (!isNull _playerAsZeus) then {
+            private _color = [0.1,1,0.1,1];
+            ["Intel 1 destroyed", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+        };
+    } forEach allCurators;
+}] call CBA_fnc_addEventHandler;
+
+
+["GRAD_intelDestroyed2", {
+
+    // send message to all curators
+    {
+        private _playerAsZeus = getAssignedCuratorUnit _x;
+        if (!isNull _playerAsZeus) then {
+            private _color = [0.1,1,0.1,1];
+            ["Intel 2 destroyed", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+        };
+    } forEach allCurators;
+}] call CBA_fnc_addEventHandler;
+
+
+["GRAD_astronautKilled", {
+
+    // send message to all curators
+    {
+        private _playerAsZeus = getAssignedCuratorUnit _x;
+        if (!isNull _playerAsZeus) then {
+            private _color = [0.1,1,0.1,1];
+            ["Astronaut was killed", _color] remoteExec ["grad_zeus_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+        };
+    } forEach allCurators;
+}] call CBA_fnc_addEventHandler;
+
 
