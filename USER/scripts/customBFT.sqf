@@ -25,7 +25,10 @@ if (hasInterface) then {
 
 		{
 			// sp testable isplayer
-			if ((leader _x) in (playableUnits + switchableUnits) && isNull (getAssignedCuratorLogic _x)) then {
+			if (
+				(leader _x) in (playableUnits + switchableUnits) && 
+				isNull (getAssignedCuratorLogic player)
+			) then {
 
 				private _groupIsKraken = (leader _x) getVariable ["grad_iskraken", false];
 				

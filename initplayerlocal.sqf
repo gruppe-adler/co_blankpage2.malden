@@ -13,4 +13,5 @@ if (player getVariable ["grad_iskraken", false]) then {
 if ((typeOf player) isNotEqualTo "B_Helipilot_F") then {
     sleep 20;
     [] call BP_LOADOUT_fnc_addLoadoutAction;
+    [] execVM "user\scripts\addTrackerAction.sqf";
 };

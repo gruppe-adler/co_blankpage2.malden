@@ -3,8 +3,6 @@
 *   Funktioniert wie die init.sqf.
 */
 
-[player] execVM "user\scripts\addTrackerAction.sqf";
-
 [] execVM "user\scripts\startCountdown.sqf";
 
 // make KRAKEN HQ visible for kraken only

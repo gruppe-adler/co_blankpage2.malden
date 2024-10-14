@@ -97,11 +97,11 @@ params ["_object"];
 	true
  }, 
  {
-	params ["_target"];
+	params ["_target", "_caller"];
 	_target setVariable ["GRAD_Capsule_Welded", false, true];
 	["The hatch has been opened.", 1, [1,1,1,1], true] call CBA_fnc_notify;
 	// spawn spaceman on server
-	[[_target], "USER\scripts\spawnSpaceMan.sqf"] remoteExec ["BIS_fnc_execVM", 2];
+	[[_target, _caller], "USER\scripts\spawnSpaceMan.sqf"] remoteExec ["BIS_fnc_execVM", 2];
 
 	_target setVariable ["GRAD_Capsule_Grinded", true, true];
 
