@@ -17,9 +17,7 @@ sleep 0.5;
 [_heli1] call BP_ambush_fnc_playLanding_N;
 sleep 0.5;
 [_heli2] call BP_ambush_fnc_playLanding_W;
-
-_heli1 allowDamage true;
-_heli2 allowDamage true;
+sleep 0.5;
 
 private _heli1Waypoint = _heli1Crew addWaypoint [[9541.41,7121.64,0], 0];
 _heli1Waypoint setWaypointType "SCRIPTED";
