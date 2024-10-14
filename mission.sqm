@@ -33070,7 +33070,7 @@ class Mission
 			dataType="Marker";
 			position[]={9473.1533,4.4183736,6931.9727};
 			name="grasscutter_3";
-			markerType="ELLIPSE";
+			markerType="RECTANGLE";
 			type="";
 			a=25;
 			b=25;
