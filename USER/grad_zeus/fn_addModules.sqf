@@ -269,6 +269,24 @@
 
 }] call zen_custom_modules_fnc_register;
 
+
+
+["BLANK PAGE - KRAKEN", "BLUE ON BLUE",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["KRAKEN, this is Command. There has been a friendly fire incident involving SEAWATCH. This is unacceptable. Ensure no further blue on blue engagements. Any further mistakes will have consequences. Command out.", 
+        "kraken_blueonblue", 
+        14,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
 ["BLANK PAGE - KRAKEN DEBRIEF", "SUCCESS",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -378,6 +396,20 @@
         ["SEAWATCH, this is Command. We've decrypted the intel from the capsule and it contains alarming information: KRAKEN's commander has been compromised. He has committed treason and is operating under rogue orders. KRAKEN seems to be unknowingly following his lead. Your mission has changed. You are to proceed to KRAKEN Command’s location at grid coordinates 107 120. Engage and neutralize the rogue commander. However, do your best to inform KRAKEN of the situation before hostilities break out. If you can convince them of the commander’s true intentions, they may support your assault. Mission priority is eliminating KRAKEN Command, but avoid friendly casualties if possible. Command out.", 
         "seawatch_4", 
         49,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+["BLANK PAGE - SEAWATCH", "BLUE ON BLUE",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["SEAWATCH, this is Command. There has been a friendly fire incident involving KRAKEN. This is unacceptable. Ensure no further blue on blue engagements. Any further mistakes will have consequences. Command out.", 
+        "seawatch_blueonblue", 
+        11,
         false
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
