@@ -62,6 +62,10 @@ _attackWP1 = (_infHeli2 # 0) addWaypoint [[9460.94,6926.63,0], 1];
 _attackWP1 setWaypointSpeed "FULL";
 
 
+_heli1 allowDamage true;
+_heli2 allowDamage true;
+
+
 // STOP BOUNCE
 
 {

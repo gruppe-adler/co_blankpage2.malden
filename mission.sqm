@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2661;
+		nextID=2747;
 	};
 	class Camera
 	{
-		pos[]={5903.2622,54.95261,2469.6025};
-		dir[]={-0.8912946,-0.30692342,-0.33408058};
-		up[]={-0.28753042,0.95168889,-0.10777519};
-		aside[]={-0.35101444,-3.0957744e-07,0.93647331};
+		pos[]={9475.1553,38.921627,6919.8462};
+		dir[]={-0.11971166,-0.80135542,0.58608758};
+		up[]={-0.16037017,0.59818852,0.78514457};
+		aside[]={0.97977066,7.4505806e-09,0.20012364};
 	};
 };
 binarizationWanted=0;
-sourceName="Co_BlankPage2";
+sourceName="co_blankpage2";
 addons[]=
 {
 	"A3_Modules_F_Heli_Misc",
@@ -8463,7 +8463,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=-105.25889;
+			atlOffset=96.745712;
 		};
 		class Item2
 		{
@@ -23289,7 +23289,7 @@ class Mission
 					};
 					id=7604;
 					type="Land_CampingChair_V2_F";
-					atlOffset=0.0001449585;
+					atlOffset=-3.8146973e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23358,7 +23358,6 @@ class Mission
 					};
 					id=7606;
 					type="Land_CampingChair_V2_F";
-					atlOffset=0.00023651123;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23393,7 +23392,6 @@ class Mission
 					};
 					id=7607;
 					type="Land_CampingChair_V2_F";
-					atlOffset=0.00023651123;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23428,7 +23426,6 @@ class Mission
 					};
 					id=7608;
 					type="Land_CampingChair_V2_F";
-					atlOffset=0.00017166138;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23463,7 +23460,6 @@ class Mission
 					};
 					id=7609;
 					type="Land_BatteryPack_01_open_sand_F";
-					atlOffset=9.1552734e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23498,7 +23494,7 @@ class Mission
 					};
 					id=7610;
 					type="Land_Computer_01_sand_F";
-					atlOffset=1.9073486e-05;
+					atlOffset=3.8146973e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23533,7 +23529,6 @@ class Mission
 					};
 					id=7611;
 					type="Land_DeskChair_01_sand_F";
-					atlOffset=5.7220459e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23568,7 +23563,6 @@ class Mission
 					};
 					id=7612;
 					type="Land_DeskChair_01_sand_F";
-					atlOffset=5.7220459e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23603,7 +23597,6 @@ class Mission
 					};
 					id=7613;
 					type="Land_DeskChair_01_sand_F";
-					atlOffset=6.4849854e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23638,7 +23631,6 @@ class Mission
 					};
 					id=7614;
 					type="Land_IPPhone_01_sand_F";
-					atlOffset=1.1444092e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23672,7 +23664,7 @@ class Mission
 					};
 					id=7615;
 					type="Land_Laptop_03_sand_F";
-					atlOffset=0.8960228;
+					atlOffset=0.89599991;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23707,7 +23699,6 @@ class Mission
 					};
 					id=7616;
 					type="Land_TripodScreen_01_large_sand_F";
-					atlOffset=0.00028610229;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23756,7 +23747,7 @@ class Mission
 					};
 					id=7617;
 					type="Land_TripodScreen_01_large_sand_F";
-					atlOffset=0.00048828125;
+					atlOffset=-3.8146973e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23791,7 +23782,6 @@ class Mission
 					};
 					id=7618;
 					type="Land_MultiScreenComputer_01_sand_F";
-					atlOffset=6.4849854e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23826,7 +23816,6 @@ class Mission
 					};
 					id=7619;
 					type="Land_PortableCabinet_01_4drawers_sand_F";
-					atlOffset=0.013702393;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23896,7 +23885,6 @@ class Mission
 					};
 					id=7621;
 					type="Land_PortableDesk_01_sand_F";
-					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23931,7 +23919,6 @@ class Mission
 					};
 					id=7622;
 					type="Land_PortableDesk_01_sand_F";
-					atlOffset=0.00015258789;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24069,7 +24056,7 @@ class Mission
 					};
 					id=7626;
 					type="Land_WaterCooler_01_new_F";
-					atlOffset=0.00020980835;
+					atlOffset=0.03622818;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24920,7 +24907,7 @@ class Mission
 					};
 					id=7648;
 					type="Land_IntravenStand_01_1bag_F";
-					atlOffset=0.016262054;
+					atlOffset=0.016212463;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24956,7 +24943,7 @@ class Mission
 					};
 					id=7649;
 					type="Land_IntravenStand_01_2bags_F";
-					atlOffset=0.0076217651;
+					atlOffset=0.0075721741;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25583,7 +25570,6 @@ class Mission
 					};
 					id=7666;
 					type="Land_PressureWasher_01_F";
-					atlOffset=0.00017166138;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29780,7 +29766,7 @@ class Mission
 				};
 			};
 			id=7790;
-			atlOffset=3.6394463;
+			atlOffset=-346.60049;
 		};
 		class Item90
 		{
@@ -33436,12 +33422,12 @@ class Mission
 		class Item192
 		{
 			dataType="Trigger";
-			position[]={9475.2539,4.3050385,6942.4775};
+			position[]={9475.2539,4.3047929,6942.478};
 			angle=0.30265754;
 			class Attributes
 			{
 				condition="this && !(missionNameSpace getVariable [""GRAD_traptriggered"", false])";
-				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container1, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 1;" \n "{ _x enableAI ""ALL""; _x disableAI ""PATH""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "[""GRAD_traptriggered"", []] call CBA_fnc_globalEvent;" \n "[] spawn BP_AMBUSH_fnc_launchAttack;" \n "};";
+				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container1, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 0.8;" \n "{ _x enableAI ""ALL""; _x disableAI ""PATH""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "[""GRAD_traptriggered"", []] call CBA_fnc_globalEvent;" \n "[] spawn BP_AMBUSH_fnc_launchAttack;" \n "};";
 				sizeA=0.89999998;
 				sizeB=4;
 				sizeC=5;
@@ -33451,16 +33437,17 @@ class Mission
 			};
 			id=8400;
 			type="EmptyDetectorArea10x10";
+			atlOffset=0.13899994;
 		};
 		class Item193
 		{
 			dataType="Trigger";
-			position[]={9479.6807,4.2443275,6940.5615};
+			position[]={9479.6807,4.2441139,6940.562};
 			angle=0.51354569;
 			class Attributes
 			{
 				condition="this && !(missionNameSpace getVariable [""GRAD_traptriggered"", false])";
-				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container2, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 1;" \n "{ _x enableAI ""ALL""; _x disableAI ""PATH""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "[""GRAD_traptriggered"", []] call CBA_fnc_globalEvent;" \n "[] spawn BP_AMBUSH_fnc_launchAttack;" \n "};";
+				onActivation="[] spawn { " \n "container1 animateSource [""Door_1_sound_source"", 1]; " \n "container1 animateSource [""Door_2_sound_source"", 1];" \n "container2 animateSource [""Door_1_sound_source"", 1]; " \n "container2 animateSource [""Door_2_sound_source"", 1];" \n "[container2, [""sendregards"", 100]] remoteExec [""say3D""];" \n "sleep 0.8;" \n "{ _x enableAI ""ALL""; _x disableAI ""PATH""; } forEach [trapdude1, trapdude2, trapdude3, trapdude4];" \n "missionNameSpace setVariable [""GRAD_traptriggered"", true, true];" \n "[""GRAD_traptriggered"", []] call CBA_fnc_globalEvent;" \n "[] spawn BP_AMBUSH_fnc_launchAttack;" \n "};";
 				sizeA=0.89999998;
 				sizeB=4;
 				sizeC=5;
@@ -33470,6 +33457,7 @@ class Mission
 			};
 			id=8402;
 			type="EmptyDetectorArea10x10";
+			atlOffset=0.28399992;
 		};
 		class Item194
 		{
