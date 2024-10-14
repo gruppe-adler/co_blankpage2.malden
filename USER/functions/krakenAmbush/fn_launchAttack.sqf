@@ -18,9 +18,6 @@ sleep 0.5;
 sleep 0.5;
 [_heli2] call BP_ambush_fnc_playLanding_W;
 
-_heli1 allowDamage true;
-_heli2 allowDamage true;
-
 private _heli1Waypoint = _heli1Crew addWaypoint [[9541.41,7121.64,0], 0];
 _heli1Waypoint setWaypointType "SCRIPTED";
 _heli1Waypoint setWaypointScript "A3\functions_f\waypoints\fn_wpLand.sqf";
